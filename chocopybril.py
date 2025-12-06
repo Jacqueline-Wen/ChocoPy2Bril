@@ -1,12 +1,13 @@
 import ast
+import subprocess
+import sys
 
-def parse_data(file_name):
-    file_path = file_name
-    with open(file_path, "r") as f:
-        source_code = f.read()
-
-    tree = ast.parse(source_code, filename=file_path)
+def chocopy_ast(file_path):
+    subprocess.run(["python", "chocopy-python-compiler/main.py", "--mode", "parse", file_path, "tests"])    
 
 if __name__ == "__main__":
-    file_name = input()
-    parse_data(file_name)
+    file_path = sys.argv[1]
+    chocopy_ast(file_path)
+
+    ast_file_path = file_path[:-2] + "ast"
+    
