@@ -1,3 +1,6 @@
+cd chocopy-python-compiler
+pip install -r requirements.txt
+
 Run: python3 chocopybril.py tests/add_one.py
 This creates:
 - tests/add_one.ast (the ast version of the python file, created using the parser chocopy-python-compiler)
