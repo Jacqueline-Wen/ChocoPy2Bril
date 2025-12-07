@@ -61,7 +61,7 @@ def translate_prog(ast_dict):
             functions.append(translate_func_def(d, func_ret_types)) #ignore classdef
 
     
-    # #building main
+    #building main
     # if global_vardefs or statements:
     #     state = CodeState(func_ret_types=func_ret_types)
     #     instrs = []
@@ -118,12 +118,15 @@ def translate_func_def(f, func_ret_types):
                 )
                 instrs.append({"op": "ret", "args": [t0]})
 
-    return {
+    ret = {
         "name": func_name,
         "args": args,
         "instrs": instrs,
-        "type": ret_type,
     }
+    # print("this is ret type", str(ret_type))
+    if ret_type and ret_type != "<None>":
+        ret["type"] = ret_type,
+    return ret
 
 def translate_var_def(vardef, state):
     var_name = vardef["var"]["identifier"]["name"]
