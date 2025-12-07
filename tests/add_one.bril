@@ -1,0 +1,17 @@
+@add_one(x: int): int {
+  _temp0: int = id x;
+  _temp1: int = const 1;
+  _temp2: int = add _temp0 _temp1;
+  ret _temp2;
+}
+@main(a: int): int {
+  _temp0: int = const 0;
+  b: int = id _temp0;
+  _temp1: int = id a;
+  _temp2: int = call @add_one _temp1;
+  b: int = id _temp2;
+  _temp3: int = id b;
+  print _temp3;
+  _temp4: int = const 0;
+  ret _temp4;
+}

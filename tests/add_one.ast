@@ -2,6 +2,24 @@
   "kind": "Program",
   "declarations": [
     {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "z"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
       "kind": "FuncDef",
       "name": {
         "kind": "Identifier",
@@ -42,19 +60,60 @@
           }
         }
       ]
-    }
-  ],
-  "statements": [
+    },
     {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "print"
-        },
-        "args": [
-          {
+      "kind": "FuncDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "main"
+      },
+      "params": [
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "a"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "int"
+      },
+      "declarations": [
+        {
+          "kind": "VarDef",
+          "var": {
+            "kind": "TypedVar",
+            "identifier": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "type": {
+              "kind": "ClassType",
+              "className": "int"
+            }
+          },
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ],
+      "statements": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
             "kind": "CallExpr",
             "function": {
               "kind": "Identifier",
@@ -62,15 +121,39 @@
             },
             "args": [
               {
-                "kind": "IntegerLiteral",
-                "value": 2
+                "kind": "Identifier",
+                "name": "a"
               }
             ]
           }
-        ]
-      }
+        },
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "Identifier",
+                "name": "b"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ]
     }
   ],
+  "statements": [],
   "errors": {
     "kind": "Errors",
     "errors": []
