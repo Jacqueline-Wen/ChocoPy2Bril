@@ -101,6 +101,7 @@ def translate_func_def(f, func_ret_types):
         instrs.extend(translate_stmt(stmt, s))
 
     ret_type = f.get("returnType", {}).get("className", None)
+    # print(ret_type)
     if not instrs or instrs[-1].get("op") != "ret":
         if ret_type is None:
             instrs.append({"op": "ret"})
@@ -125,7 +126,7 @@ def translate_func_def(f, func_ret_types):
     }
     # print("this is ret type", str(ret_type))
     if ret_type and ret_type != "<None>":
-        ret["type"] = ret_type,
+        ret["type"] = ret_type
     return ret
 
 def translate_var_def(vardef, state):

@@ -2,24 +2,6 @@
   "kind": "Program",
   "declarations": [
     {
-      "kind": "VarDef",
-      "var": {
-        "kind": "TypedVar",
-        "identifier": {
-          "kind": "Identifier",
-          "name": "z"
-        },
-        "type": {
-          "kind": "ClassType",
-          "className": "int"
-        }
-      },
-      "value": {
-        "kind": "IntegerLiteral",
-        "value": 0
-      }
-    },
-    {
       "kind": "FuncDef",
       "name": {
         "kind": "Identifier",
