@@ -1,0 +1,40 @@
+{
+  "functions": [
+    {
+      "name": "foo",
+      "args": [],
+      "instrs": [
+        {
+          "op": "const",
+          "dest": "_temp0",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "op": "call",
+          "funcs": [
+            "__assert__"
+          ],
+          "args": [
+            "_temp0"
+          ],
+          "dest": "_temp1",
+          "type": "int"
+        },
+        {
+          "op": "const",
+          "dest": "_temp2",
+          "type": "bool",
+          "value": true
+        },
+        {
+          "op": "ret",
+          "args": [
+            "_temp2"
+          ]
+        }
+      ],
+      "type": "bool"
+    }
+  ]
+}

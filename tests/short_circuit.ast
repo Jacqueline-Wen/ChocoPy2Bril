@@ -1,0 +1,105 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "FuncDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "foo"
+      },
+      "params": [],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "bool"
+      },
+      "declarations": [],
+      "statements": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "BooleanLiteral",
+            "value": true
+          }
+        }
+      ]
+    }
+  ],
+  "statements": [
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "BooleanLiteral",
+              "value": true
+            },
+            "right": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "foo"
+              },
+              "args": []
+            },
+            "operator": "or"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "BooleanLiteral",
+              "value": false
+            },
+            "right": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "foo"
+              },
+              "args": []
+            },
+            "operator": "and"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

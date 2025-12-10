@@ -1,0 +1,434 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "ClassDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "Counter"
+      },
+      "superClass": {
+        "kind": "Identifier",
+        "name": "object"
+      },
+      "declarations": [
+        {
+          "kind": "VarDef",
+          "var": {
+            "kind": "TypedVar",
+            "identifier": {
+              "kind": "Identifier",
+              "name": "n"
+            },
+            "type": {
+              "kind": "ClassType",
+              "className": "int"
+            }
+          },
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        },
+        {
+          "kind": "FuncDef",
+          "name": {
+            "kind": "Identifier",
+            "name": "__init__"
+          },
+          "params": [
+            {
+              "kind": "TypedVar",
+              "identifier": {
+                "kind": "Identifier",
+                "name": "self"
+              },
+              "type": {
+                "kind": "ClassType",
+                "className": "Counter"
+              }
+            }
+          ],
+          "returnType": {
+            "kind": "ClassType",
+            "className": "<None>"
+          },
+          "declarations": [],
+          "statements": []
+        },
+        {
+          "kind": "FuncDef",
+          "name": {
+            "kind": "Identifier",
+            "name": "inc"
+          },
+          "params": [
+            {
+              "kind": "TypedVar",
+              "identifier": {
+                "kind": "Identifier",
+                "name": "self"
+              },
+              "type": {
+                "kind": "ClassType",
+                "className": "Counter"
+              }
+            }
+          ],
+          "returnType": {
+            "kind": "ClassType",
+            "className": "<None>"
+          },
+          "declarations": [],
+          "statements": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "MemberExpr",
+                  "object": {
+                    "kind": "Identifier",
+                    "name": "self"
+                  },
+                  "member": {
+                    "kind": "Identifier",
+                    "name": "n"
+                  }
+                }
+              ],
+              "value": {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "MemberExpr",
+                  "object": {
+                    "kind": "Identifier",
+                    "name": "self"
+                  },
+                  "member": {
+                    "kind": "Identifier",
+                    "name": "n"
+                  }
+                },
+                "right": {
+                  "kind": "IntegerLiteral",
+                  "value": 1
+                },
+                "operator": "+"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "c"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "Counter"
+        }
+      },
+      "value": {
+        "kind": "NoneLiteral"
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "i"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "c"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "Counter"
+        },
+        "args": []
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "MethodCallExpr",
+        "method": {
+          "kind": "MemberExpr",
+          "object": {
+            "kind": "Identifier",
+            "name": "c"
+          },
+          "member": {
+            "kind": "Identifier",
+            "name": "inc"
+          }
+        },
+        "args": []
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "c"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "MethodCallExpr",
+        "method": {
+          "kind": "MemberExpr",
+          "object": {
+            "kind": "Identifier",
+            "name": "c"
+          },
+          "member": {
+            "kind": "Identifier",
+            "name": "inc"
+          }
+        },
+        "args": []
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "c"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 2
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "MethodCallExpr",
+        "method": {
+          "kind": "MemberExpr",
+          "object": {
+            "kind": "Identifier",
+            "name": "c"
+          },
+          "member": {
+            "kind": "Identifier",
+            "name": "inc"
+          }
+        },
+        "args": []
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "MethodCallExpr",
+        "method": {
+          "kind": "MemberExpr",
+          "object": {
+            "kind": "Identifier",
+            "name": "c"
+          },
+          "member": {
+            "kind": "Identifier",
+            "name": "inc"
+          }
+        },
+        "args": []
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "c"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 4
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ForStmt",
+      "identifier": {
+        "kind": "Identifier",
+        "name": "i"
+      },
+      "iterable": {
+        "kind": "ListExpr",
+        "elements": [
+          {
+            "kind": "IntegerLiteral",
+            "value": 9
+          },
+          {
+            "kind": "IntegerLiteral",
+            "value": 9
+          },
+          {
+            "kind": "IntegerLiteral",
+            "value": 9
+          },
+          {
+            "kind": "IntegerLiteral",
+            "value": 9
+          },
+          {
+            "kind": "IntegerLiteral",
+            "value": 9
+          },
+          {
+            "kind": "IntegerLiteral",
+            "value": 9
+          }
+        ]
+      },
+      "body": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "MethodCallExpr",
+            "method": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "c"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "inc"
+              }
+            },
+            "args": []
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "c"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 10
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

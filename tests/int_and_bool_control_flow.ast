@@ -1,0 +1,393 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "x"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 1
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "y"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 2
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "a"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "bool"
+        }
+      },
+      "value": {
+        "kind": "BooleanLiteral",
+        "value": true
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "bool"
+        }
+      },
+      "value": {
+        "kind": "BooleanLiteral",
+        "value": false
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "Identifier",
+        "name": "a"
+      },
+      "thenBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": true
+              }
+            ]
+          }
+        }
+      ],
+      "elseBody": []
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "Identifier",
+        "name": "a"
+      },
+      "thenBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": true
+              }
+            ]
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "Identifier",
+        "name": "b"
+      },
+      "thenBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "elseBody": []
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "Identifier",
+        "name": "b"
+      },
+      "thenBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "x"
+        },
+        "right": {
+          "kind": "Identifier",
+          "name": "y"
+        },
+        "operator": "=="
+      },
+      "thenBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "x"
+        },
+        "right": {
+          "kind": "Identifier",
+          "name": "x"
+        },
+        "operator": "=="
+      },
+      "thenBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": true
+              }
+            ]
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "__assert__"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "IfExpr",
+              "condition": {
+                "kind": "Identifier",
+                "name": "a"
+              },
+              "thenExpr": {
+                "kind": "IntegerLiteral",
+                "value": 5
+              },
+              "elseExpr": {
+                "kind": "IntegerLiteral",
+                "value": 0
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 5
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "IfExpr",
+              "condition": {
+                "kind": "Identifier",
+                "name": "b"
+              },
+              "thenExpr": {
+                "kind": "IntegerLiteral",
+                "value": 0
+              },
+              "elseExpr": {
+                "kind": "IntegerLiteral",
+                "value": 5
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 5
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "Program",
+  "declarations": [],
+  "statements": [
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "IntegerLiteral",
+        "value": 1
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "IntegerLiteral",
+        "value": 2
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "NoneLiteral"
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "StringLiteral",
+        "value": "123"
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "BooleanLiteral",
+        "value": false
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

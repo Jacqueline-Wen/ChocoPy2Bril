@@ -1,0 +1,1080 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "a"
+        },
+        "type": {
+          "kind": "ListType",
+          "elementType": {
+            "kind": "ListType",
+            "elementType": {
+              "kind": "ClassType",
+              "className": "int"
+            }
+          }
+        }
+      },
+      "value": {
+        "kind": "NoneLiteral"
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "type": {
+          "kind": "ListType",
+          "elementType": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      },
+      "value": {
+        "kind": "NoneLiteral"
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "c"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "d"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "a"
+        }
+      ],
+      "value": {
+        "kind": "ListExpr",
+        "elements": [
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "Identifier",
+                  "name": "a"
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "IndexExpr",
+                  "list": {
+                    "kind": "Identifier",
+                    "name": "a"
+                  },
+                  "index": {
+                    "kind": "IntegerLiteral",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "a"
+        }
+      ],
+      "value": {
+        "kind": "ListExpr",
+        "elements": [
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 2
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 2
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 3
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "Identifier",
+                  "name": "a"
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 4
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "IndexExpr",
+                  "list": {
+                    "kind": "Identifier",
+                    "name": "a"
+                  },
+                  "index": {
+                    "kind": "IntegerLiteral",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "IndexExpr",
+                  "list": {
+                    "kind": "Identifier",
+                    "name": "a"
+                  },
+                  "index": {
+                    "kind": "IntegerLiteral",
+                    "value": 1
+                  }
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 3
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "IndexExpr",
+                  "list": {
+                    "kind": "Identifier",
+                    "name": "a"
+                  },
+                  "index": {
+                    "kind": "IntegerLiteral",
+                    "value": 2
+                  }
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 2
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "IndexExpr",
+                  "list": {
+                    "kind": "Identifier",
+                    "name": "a"
+                  },
+                  "index": {
+                    "kind": "IntegerLiteral",
+                    "value": 3
+                  }
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "IndexExpr",
+              "list": {
+                "kind": "IndexExpr",
+                "list": {
+                  "kind": "Identifier",
+                  "name": "a"
+                },
+                "index": {
+                  "kind": "IntegerLiteral",
+                  "value": 0
+                }
+              },
+              "index": {
+                "kind": "IntegerLiteral",
+                "value": 0
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "IndexExpr",
+              "list": {
+                "kind": "IndexExpr",
+                "list": {
+                  "kind": "Identifier",
+                  "name": "a"
+                },
+                "index": {
+                  "kind": "IntegerLiteral",
+                  "value": 1
+                }
+              },
+              "index": {
+                "kind": "IntegerLiteral",
+                "value": 0
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 2
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "IndexExpr",
+              "list": {
+                "kind": "IndexExpr",
+                "list": {
+                  "kind": "Identifier",
+                  "name": "a"
+                },
+                "index": {
+                  "kind": "IntegerLiteral",
+                  "value": 1
+                }
+              },
+              "index": {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 2
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "IndexExpr",
+              "list": {
+                "kind": "IndexExpr",
+                "list": {
+                  "kind": "Identifier",
+                  "name": "a"
+                },
+                "index": {
+                  "kind": "IntegerLiteral",
+                  "value": 1
+                }
+              },
+              "index": {
+                "kind": "IntegerLiteral",
+                "value": 2
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 2
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "IndexExpr",
+          "list": {
+            "kind": "IndexExpr",
+            "list": {
+              "kind": "Identifier",
+              "name": "a"
+            },
+            "index": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            }
+          },
+          "index": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 5
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "IndexExpr",
+              "list": {
+                "kind": "IndexExpr",
+                "list": {
+                  "kind": "Identifier",
+                  "name": "a"
+                },
+                "index": {
+                  "kind": "IntegerLiteral",
+                  "value": 0
+                }
+              },
+              "index": {
+                "kind": "IntegerLiteral",
+                "value": 0
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 5
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "IndexExpr",
+          "list": {
+            "kind": "Identifier",
+            "name": "a"
+          },
+          "index": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ],
+      "value": {
+        "kind": "ListExpr",
+        "elements": [
+          {
+            "kind": "IntegerLiteral",
+            "value": 2
+          },
+          {
+            "kind": "IntegerLiteral",
+            "value": 2
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "IndexExpr",
+                  "list": {
+                    "kind": "Identifier",
+                    "name": "a"
+                  },
+                  "index": {
+                    "kind": "IntegerLiteral",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 2
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "IndexExpr",
+          "list": {
+            "kind": "Identifier",
+            "name": "a"
+          },
+          "index": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ],
+      "value": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "IndexExpr",
+          "list": {
+            "kind": "Identifier",
+            "name": "a"
+          },
+          "index": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        },
+        "right": {
+          "kind": "ListExpr",
+          "elements": [
+            {
+              "kind": "IntegerLiteral",
+              "value": 3
+            }
+          ]
+        },
+        "operator": "+"
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "IndexExpr",
+                  "list": {
+                    "kind": "Identifier",
+                    "name": "a"
+                  },
+                  "index": {
+                    "kind": "IntegerLiteral",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 3
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "a"
+        }
+      ],
+      "value": {
+        "kind": "ListExpr",
+        "elements": [
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "c"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "ForStmt",
+      "identifier": {
+        "kind": "Identifier",
+        "name": "b"
+      },
+      "iterable": {
+        "kind": "Identifier",
+        "name": "a"
+      },
+      "body": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "c"
+            }
+          ],
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "c"
+            },
+            "right": {
+              "kind": "CallExpr",
+              "function": {
+                "kind": "Identifier",
+                "name": "len"
+              },
+              "args": [
+                {
+                  "kind": "Identifier",
+                  "name": "b"
+                }
+              ]
+            },
+            "operator": "+"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "c"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 6
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "a"
+        }
+      ],
+      "value": {
+        "kind": "ListExpr",
+        "elements": [
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 2
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 3
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": [
+              {
+                "kind": "IntegerLiteral",
+                "value": 5
+              },
+              {
+                "kind": "IntegerLiteral",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "kind": "ListExpr",
+            "elements": []
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "c"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "ForStmt",
+      "identifier": {
+        "kind": "Identifier",
+        "name": "b"
+      },
+      "iterable": {
+        "kind": "Identifier",
+        "name": "a"
+      },
+      "body": [
+        {
+          "kind": "ForStmt",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "d"
+          },
+          "iterable": {
+            "kind": "Identifier",
+            "name": "b"
+          },
+          "body": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "Identifier",
+                  "name": "c"
+                }
+              ],
+              "value": {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "Identifier",
+                  "name": "c"
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "name": "d"
+                },
+                "operator": "+"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "c"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 15
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

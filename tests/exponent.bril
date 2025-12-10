@@ -1,0 +1,9 @@
+@exp(x: int, y: int): int {
+  _temp0: int = const 0;
+  a: int = id _temp0;
+  _temp1: int = const 1;
+  a: int = id _temp1;
+  _temp2: int = id y;
+  _temp3: int = call @f _temp2;
+  ret _temp3;
+}

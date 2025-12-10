@@ -1,0 +1,108 @@
+{
+  "functions": [
+    {
+      "name": "t",
+      "args": [],
+      "instrs": [
+        {
+          "op": "id",
+          "dest": "_temp0",
+          "type": "int",
+          "args": [
+            "x"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp1",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "op": "add",
+          "dest": "_temp2",
+          "type": "int",
+          "args": [
+            "_temp0",
+            "_temp1"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "x",
+          "type": "int",
+          "args": [
+            "_temp2"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp3",
+          "type": "int",
+          "args": [
+            "y"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp4",
+          "type": "int",
+          "args": [
+            "y"
+          ]
+        },
+        {
+          "op": "add",
+          "dest": "_temp5",
+          "type": "int",
+          "args": [
+            "_temp3",
+            "_temp4"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "y",
+          "type": "int",
+          "args": [
+            "_temp5"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp6",
+          "type": "int",
+          "args": [
+            "z"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp7",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "op": "eq",
+          "dest": "_temp8",
+          "type": "bool",
+          "args": [
+            "_temp6",
+            "_temp7"
+          ]
+        },
+        {
+          "op": "call",
+          "funcs": [
+            "__assert__"
+          ],
+          "args": [
+            "_temp8"
+          ],
+          "dest": "_temp9",
+          "type": "int"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@foo: bool {
+  _temp0: bool = const false;
+  _temp1: int = call @__assert__ _temp0;
+  _temp2: bool = const true;
+  ret _temp2;
+}

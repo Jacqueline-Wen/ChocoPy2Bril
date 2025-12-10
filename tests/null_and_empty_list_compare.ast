@@ -1,0 +1,150 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "w"
+        },
+        "type": {
+          "kind": "ListType",
+          "elementType": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      },
+      "value": {
+        "kind": "NoneLiteral"
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "w"
+            },
+            "right": {
+              "kind": "NoneLiteral"
+            },
+            "operator": "is"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "UnaryExpr",
+            "operator": "not",
+            "operand": {
+              "kind": "BinaryExpr",
+              "left": {
+                "kind": "Identifier",
+                "name": "w"
+              },
+              "right": {
+                "kind": "ListExpr",
+                "elements": []
+              },
+              "operator": "is"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "w"
+        }
+      ],
+      "value": {
+        "kind": "ListExpr",
+        "elements": []
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "UnaryExpr",
+            "operator": "not",
+            "operand": {
+              "kind": "BinaryExpr",
+              "left": {
+                "kind": "Identifier",
+                "name": "w"
+              },
+              "right": {
+                "kind": "NoneLiteral"
+              },
+              "operator": "is"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "UnaryExpr",
+            "operator": "not",
+            "operand": {
+              "kind": "BinaryExpr",
+              "left": {
+                "kind": "Identifier",
+                "name": "w"
+              },
+              "right": {
+                "kind": "ListExpr",
+                "elements": []
+              },
+              "operator": "is"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

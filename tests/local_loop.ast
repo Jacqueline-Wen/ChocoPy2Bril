@@ -1,0 +1,83 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "x"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "str"
+        }
+      },
+      "value": {
+        "kind": "StringLiteral",
+        "value": ""
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "y"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "str"
+        }
+      },
+      "value": {
+        "kind": "StringLiteral",
+        "value": "123"
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "ForStmt",
+      "identifier": {
+        "kind": "Identifier",
+        "name": "x"
+      },
+      "iterable": {
+        "kind": "Identifier",
+        "name": "y"
+      },
+      "body": []
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "x"
+            },
+            "right": {
+              "kind": "StringLiteral",
+              "value": "3"
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

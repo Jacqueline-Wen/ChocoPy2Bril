@@ -1,0 +1,14 @@
+@t {
+  _temp0: int = id x;
+  _temp1: int = const 1;
+  _temp2: int = add _temp0 _temp1;
+  x: int = id _temp2;
+  _temp3: int = id y;
+  _temp4: int = id y;
+  _temp5: int = add _temp3 _temp4;
+  y: int = id _temp5;
+  _temp6: int = id z;
+  _temp7: int = const 0;
+  _temp8: bool = eq _temp6 _temp7;
+  _temp9: int = call @__assert__ _temp8;
+}

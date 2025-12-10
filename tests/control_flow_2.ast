@@ -1,0 +1,919 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": "=="
+      },
+      "thenBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 1
+          }
+        }
+      ],
+      "elseBody": []
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": "!="
+      },
+      "thenBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 2
+          }
+        }
+      ],
+      "elseBody": []
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": "!="
+      },
+      "thenBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": "=="
+      },
+      "thenBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 1
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": ">"
+      },
+      "thenBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "IfStmt",
+          "condition": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            },
+            "operator": "<"
+          },
+          "thenBody": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "Identifier",
+                  "name": "b"
+                }
+              ],
+              "value": {
+                "kind": "IntegerLiteral",
+                "value": 0
+              }
+            }
+          ],
+          "elseBody": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "Identifier",
+                  "name": "b"
+                }
+              ],
+              "value": {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": "=="
+      },
+      "thenBody": [],
+      "elseBody": [
+        {
+          "kind": "IfStmt",
+          "condition": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            },
+            "operator": "<"
+          },
+          "thenBody": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "Identifier",
+                  "name": "b"
+                }
+              ],
+              "value": {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            }
+          ],
+          "elseBody": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "Identifier",
+                  "name": "b"
+                }
+              ],
+              "value": {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 5
+      }
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": "=="
+      },
+      "thenBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 1
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "IfStmt",
+          "condition": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            },
+            "operator": "<"
+          },
+          "thenBody": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "Identifier",
+                  "name": "b"
+                }
+              ],
+              "value": {
+                "kind": "IntegerLiteral",
+                "value": 2
+              }
+            }
+          ],
+          "elseBody": []
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 5
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "UnaryExpr",
+        "operator": "-",
+        "operand": {
+          "kind": "IntegerLiteral",
+          "value": 1
+        }
+      }
+    },
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": ">"
+      },
+      "thenBody": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "IfStmt",
+          "condition": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            },
+            "operator": "<"
+          },
+          "thenBody": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "Identifier",
+                  "name": "b"
+                }
+              ],
+              "value": {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            }
+          ],
+          "elseBody": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "Identifier",
+                  "name": "b"
+                }
+              ],
+              "value": {
+                "kind": "IntegerLiteral",
+                "value": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "UnaryExpr",
+        "operator": "-",
+        "operand": {
+          "kind": "IntegerLiteral",
+          "value": 1
+        }
+      }
+    },
+    {
+      "kind": "WhileStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": ">"
+      },
+      "body": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "-"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "UnaryExpr",
+              "operator": "-",
+              "operand": {
+                "kind": "IntegerLiteral",
+                "value": 1
+              }
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "b"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 5
+      }
+    },
+    {
+      "kind": "WhileStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 0
+        },
+        "operator": ">"
+      },
+      "body": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "b"
+            }
+          ],
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "-"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 0
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

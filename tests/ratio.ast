@@ -1,0 +1,742 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "ClassDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "Rat"
+      },
+      "superClass": {
+        "kind": "Identifier",
+        "name": "object"
+      },
+      "declarations": [
+        {
+          "kind": "VarDef",
+          "var": {
+            "kind": "TypedVar",
+            "identifier": {
+              "kind": "Identifier",
+              "name": "n"
+            },
+            "type": {
+              "kind": "ClassType",
+              "className": "int"
+            }
+          },
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        },
+        {
+          "kind": "VarDef",
+          "var": {
+            "kind": "TypedVar",
+            "identifier": {
+              "kind": "Identifier",
+              "name": "d"
+            },
+            "type": {
+              "kind": "ClassType",
+              "className": "int"
+            }
+          },
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        },
+        {
+          "kind": "FuncDef",
+          "name": {
+            "kind": "Identifier",
+            "name": "__init__"
+          },
+          "params": [
+            {
+              "kind": "TypedVar",
+              "identifier": {
+                "kind": "Identifier",
+                "name": "self"
+              },
+              "type": {
+                "kind": "ClassType",
+                "className": "Rat"
+              }
+            }
+          ],
+          "returnType": {
+            "kind": "ClassType",
+            "className": "<None>"
+          },
+          "declarations": [],
+          "statements": []
+        },
+        {
+          "kind": "FuncDef",
+          "name": {
+            "kind": "Identifier",
+            "name": "new"
+          },
+          "params": [
+            {
+              "kind": "TypedVar",
+              "identifier": {
+                "kind": "Identifier",
+                "name": "self"
+              },
+              "type": {
+                "kind": "ClassType",
+                "className": "Rat"
+              }
+            },
+            {
+              "kind": "TypedVar",
+              "identifier": {
+                "kind": "Identifier",
+                "name": "n"
+              },
+              "type": {
+                "kind": "ClassType",
+                "className": "int"
+              }
+            },
+            {
+              "kind": "TypedVar",
+              "identifier": {
+                "kind": "Identifier",
+                "name": "d"
+              },
+              "type": {
+                "kind": "ClassType",
+                "className": "int"
+              }
+            }
+          ],
+          "returnType": {
+            "kind": "ClassType",
+            "className": "Rat"
+          },
+          "declarations": [],
+          "statements": [
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "MemberExpr",
+                  "object": {
+                    "kind": "Identifier",
+                    "name": "self"
+                  },
+                  "member": {
+                    "kind": "Identifier",
+                    "name": "n"
+                  }
+                }
+              ],
+              "value": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            {
+              "kind": "AssignStmt",
+              "targets": [
+                {
+                  "kind": "MemberExpr",
+                  "object": {
+                    "kind": "Identifier",
+                    "name": "self"
+                  },
+                  "member": {
+                    "kind": "Identifier",
+                    "name": "d"
+                  }
+                }
+              ],
+              "value": {
+                "kind": "Identifier",
+                "name": "d"
+              }
+            },
+            {
+              "kind": "ReturnStmt",
+              "value": {
+                "kind": "Identifier",
+                "name": "self"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "FuncDef",
+          "name": {
+            "kind": "Identifier",
+            "name": "mul"
+          },
+          "params": [
+            {
+              "kind": "TypedVar",
+              "identifier": {
+                "kind": "Identifier",
+                "name": "self"
+              },
+              "type": {
+                "kind": "ClassType",
+                "className": "Rat"
+              }
+            },
+            {
+              "kind": "TypedVar",
+              "identifier": {
+                "kind": "Identifier",
+                "name": "other"
+              },
+              "type": {
+                "kind": "ClassType",
+                "className": "Rat"
+              }
+            }
+          ],
+          "returnType": {
+            "kind": "ClassType",
+            "className": "Rat"
+          },
+          "declarations": [],
+          "statements": [
+            {
+              "kind": "ReturnStmt",
+              "value": {
+                "kind": "MethodCallExpr",
+                "method": {
+                  "kind": "MemberExpr",
+                  "object": {
+                    "kind": "CallExpr",
+                    "function": {
+                      "kind": "Identifier",
+                      "name": "Rat"
+                    },
+                    "args": []
+                  },
+                  "member": {
+                    "kind": "Identifier",
+                    "name": "new"
+                  }
+                },
+                "args": [
+                  {
+                    "kind": "BinaryExpr",
+                    "left": {
+                      "kind": "MemberExpr",
+                      "object": {
+                        "kind": "Identifier",
+                        "name": "self"
+                      },
+                      "member": {
+                        "kind": "Identifier",
+                        "name": "n"
+                      }
+                    },
+                    "right": {
+                      "kind": "MemberExpr",
+                      "object": {
+                        "kind": "Identifier",
+                        "name": "other"
+                      },
+                      "member": {
+                        "kind": "Identifier",
+                        "name": "n"
+                      }
+                    },
+                    "operator": "*"
+                  },
+                  {
+                    "kind": "BinaryExpr",
+                    "left": {
+                      "kind": "MemberExpr",
+                      "object": {
+                        "kind": "Identifier",
+                        "name": "self"
+                      },
+                      "member": {
+                        "kind": "Identifier",
+                        "name": "d"
+                      }
+                    },
+                    "right": {
+                      "kind": "MemberExpr",
+                      "object": {
+                        "kind": "Identifier",
+                        "name": "other"
+                      },
+                      "member": {
+                        "kind": "Identifier",
+                        "name": "d"
+                      }
+                    },
+                    "operator": "*"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "r1"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "Rat"
+        }
+      },
+      "value": {
+        "kind": "NoneLiteral"
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "r2"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "Rat"
+        }
+      },
+      "value": {
+        "kind": "NoneLiteral"
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "r3"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "Rat"
+        }
+      },
+      "value": {
+        "kind": "NoneLiteral"
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "r1"
+        }
+      ],
+      "value": {
+        "kind": "MethodCallExpr",
+        "method": {
+          "kind": "MemberExpr",
+          "object": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "Rat"
+            },
+            "args": []
+          },
+          "member": {
+            "kind": "Identifier",
+            "name": "new"
+          }
+        },
+        "args": [
+          {
+            "kind": "IntegerLiteral",
+            "value": 4
+          },
+          {
+            "kind": "IntegerLiteral",
+            "value": 5
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "r2"
+        }
+      ],
+      "value": {
+        "kind": "MethodCallExpr",
+        "method": {
+          "kind": "MemberExpr",
+          "object": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "Rat"
+            },
+            "args": []
+          },
+          "member": {
+            "kind": "Identifier",
+            "name": "new"
+          }
+        },
+        "args": [
+          {
+            "kind": "IntegerLiteral",
+            "value": 2
+          },
+          {
+            "kind": "IntegerLiteral",
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r1"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 4
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r1"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "d"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 5
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r2"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 2
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r2"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "d"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 3
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "r3"
+        }
+      ],
+      "value": {
+        "kind": "MethodCallExpr",
+        "method": {
+          "kind": "MemberExpr",
+          "object": {
+            "kind": "Identifier",
+            "name": "r1"
+          },
+          "member": {
+            "kind": "Identifier",
+            "name": "mul"
+          }
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "r2"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r3"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 8
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r3"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "d"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 15
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "r3"
+        }
+      ],
+      "value": {
+        "kind": "MethodCallExpr",
+        "method": {
+          "kind": "MemberExpr",
+          "object": {
+            "kind": "MethodCallExpr",
+            "method": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r3"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "mul"
+              }
+            },
+            "args": [
+              {
+                "kind": "Identifier",
+                "name": "r2"
+              }
+            ]
+          },
+          "member": {
+            "kind": "Identifier",
+            "name": "mul"
+          }
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "r2"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r3"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 32
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "__assert__"
+        },
+        "args": [
+          {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "MemberExpr",
+              "object": {
+                "kind": "Identifier",
+                "name": "r3"
+              },
+              "member": {
+                "kind": "Identifier",
+                "name": "d"
+              }
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 135
+            },
+            "operator": "=="
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}
