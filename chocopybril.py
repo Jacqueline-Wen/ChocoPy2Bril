@@ -31,13 +31,14 @@ BIN_OP = {
     "+": "add",
     "-": "sub",
     "*": "mul",
-    "/": "div",
-    "%": "mod",
+    "//": "div",
     "==": "eq",
     "<": "lt",
     "<=": "le",
     ">": "gt",
     ">=": "ge",
+    "and": "and",
+    "or": "or",
 }
 
 def chocopy_ast(file_path):
