@@ -1,15 +1,18 @@
 import subprocess
+import io
+from contextlib import redirect_stdout
+import random
+import tests.add_one as add_one
 
 # regenerating bril files for all tests
-subprocess.run("for file in tests/*.py; do echo \"Running on $file\"; python3 chocopybril.py \"$file\"; done", shell=True)
+# subprocess.run("for file in tests/*.py; do echo \"Running on $file\"; python3 chocopybril.py \"$file\"; done", shell=True)
 
 # manually hard code test cases
 
 # add_one.py
-# subprocess.run("brili 5 < tests/add_one.json", shell=True)
-
+rnum = random.randint(1, 10)
 bril_result = subprocess.run(
-    "brili 5 < tests/add_one.json",
+    f"brili {rnum} < tests/add_one.json",
     shell=True,
     capture_output=True,
     text=True
@@ -17,11 +20,17 @@ bril_result = subprocess.run(
 
 bril_output = bril_result.stdout
 bril_output = bril_result.stdout.strip()
-print(repr(bril_output))
+print("bril ", bril_output)
 
-py_result = subprocess.run(
-    
-)
+buf = io.StringIO()
+with redirect_stdout(buf):
+    add_one.main(rnum)
+
+py_output = buf.getvalue().strip()
+print("chocopy ", py_output)
+
+assert(bril_output == py_output)
+print("add_one test successful")
 
 # assignment.py
 # classes.py
