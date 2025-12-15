@@ -235,7 +235,7 @@ def translate_expr(expr, state):
         if bril_op is None:
             raise NotImplementedError(f"Binary op not supported: {op}")
 
-        if bril_op in ("add", "sub", "mul", "div", "mod"):
+        if bril_op in ("add", "sub", "mul", "div"):
             result_type = "int"
         else:
             result_type = "bool"

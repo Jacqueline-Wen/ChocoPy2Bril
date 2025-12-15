@@ -1,0 +1,63 @@
+@main: None {
+  _temp0: int = const 1;
+  x: int = id _temp0;
+  _temp1: int = const 2;
+  y: int = id _temp1;
+  _temp2: bool = const true;
+  a: bool = id _temp2;
+  _temp3: bool = const false;
+  b: bool = id _temp3;
+  _temp4: bool = id a;
+  _temp5: bool = const true;
+  _temp6: bool = and _temp4 _temp5;
+  br _temp6 .then_0 .else_1;
+.then_0:
+  _temp7: bool = const true;
+  print _temp7;
+  jmp .endif_2;
+.else_1:
+  _temp8: bool = const false;
+  print _temp8;
+  jmp .endif_2;
+.endif_2:
+  _temp9: bool = id b;
+  _temp10: bool = const true;
+  _temp11: bool = or _temp9 _temp10;
+  br _temp11 .then_3 .else_4;
+.then_3:
+  _temp12: bool = const false;
+  print _temp12;
+  jmp .endif_5;
+.else_4:
+  _temp13: bool = const true;
+  print _temp13;
+  jmp .endif_5;
+.endif_5:
+  _temp14: int = id x;
+  _temp15: int = id y;
+  _temp16: bool = eq _temp14 _temp15;
+  br _temp16 .then_6 .else_7;
+.then_6:
+  _temp17: bool = const true;
+  print _temp17;
+  jmp .endif_8;
+.else_7:
+  _temp18: bool = const false;
+  print _temp18;
+  jmp .endif_8;
+.endif_8:
+  _temp19: int = id x;
+  _temp20: int = id x;
+  _temp21: bool = eq _temp19 _temp20;
+  br _temp21 .then_9 .else_10;
+.then_9:
+  _temp22: bool = const true;
+  print _temp22;
+  jmp .endif_11;
+.else_10:
+  _temp23: bool = const false;
+  print _temp23;
+  jmp .endif_11;
+.endif_11:
+  ret;
+}

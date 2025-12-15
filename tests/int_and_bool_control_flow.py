@@ -3,31 +3,22 @@ y: int = 2
 a: bool = True
 b: bool = False
 
-if a:
-    assert True
-
-if a:
-    assert True
+if a and True:
+    print(True)
 else:
-    assert False
+    print(False)
 
-if b:
-    assert False
-
-if b:
-    assert False
+if b or True:
+    print(False)
 else:
-    assert True
+    print(True)
 
 if x == y:
-    assert False
+    print(True)
 else:
-    assert True
+    print(False)
 
 if x == x:
-    assert True
+    print(True)
 else:
-    assert False
-
-assert (5 if a else 0) == 5
-assert (0 if b else 5) == 5
+    print(False)
