@@ -1,19 +1,13 @@
-def sum_and_check(a: int, b: int) -> bool:
-    total: int = a + b
-    return total > 10
+def sum(a: int, b: int) -> int:
+    return a + b
 
-x: int = 6
-y: int = 5
-active: bool = True
+def check(a: int) -> bool:
+    return a < 10
 
-if active and sum_and_check(x, y):
-    print("Active and sum > 10")
-else:
-    print("Inactive or sum <= 10")
+x: int = 3
+y: int = 8
+sum: int = 0
 
-i: int = 0
-while i < 4:
-    print("i =", i, "x * i =", x * i)
-    i = i + 1
-
-print("x >= y or not active?", x >= y or not active)
+sum = sum(x, y)
+print(sum)
+print(check(sum))
