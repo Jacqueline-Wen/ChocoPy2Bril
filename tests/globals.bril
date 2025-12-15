@@ -1,14 +1,35 @@
-@t {
+@t(x: int, z: int): int {
   _temp0: int = id x;
   _temp1: int = const 1;
   _temp2: int = add _temp0 _temp1;
   x: int = id _temp2;
-  _temp3: int = id y;
-  _temp4: int = id y;
+  _temp3: int = id z;
+  _temp4: int = id z;
   _temp5: int = add _temp3 _temp4;
-  y: int = id _temp5;
+  z: int = id _temp5;
   _temp6: int = id z;
   _temp7: int = const 0;
   _temp8: bool = eq _temp6 _temp7;
-  _temp9: int = call @__assert__ _temp8;
+  print _temp8;
+  _temp9: int = id x;
+  ret _temp9;
+}
+@main: None {
+  _temp0: int = const 0;
+  x: int = id _temp0;
+  _temp1: int = const 0;
+  z: int = id _temp1;
+  _temp2: int = id x;
+  _temp3: int = const 0;
+  _temp4: bool = eq _temp2 _temp3;
+  print _temp4;
+  _temp5: int = id x;
+  _temp6: int = id z;
+  _temp7: int = call @t _temp5 _temp6;
+  x: int = id _temp7;
+  _temp8: int = id x;
+  _temp9: int = const 1;
+  _temp10: bool = eq _temp8 _temp9;
+  print _temp10;
+  ret;
 }

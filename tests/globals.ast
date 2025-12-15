@@ -25,24 +25,6 @@
         "kind": "TypedVar",
         "identifier": {
           "kind": "Identifier",
-          "name": "y"
-        },
-        "type": {
-          "kind": "ClassType",
-          "className": "str"
-        }
-      },
-      "value": {
-        "kind": "StringLiteral",
-        "value": "a"
-      }
-    },
-    {
-      "kind": "VarDef",
-      "var": {
-        "kind": "TypedVar",
-        "identifier": {
-          "kind": "Identifier",
           "name": "z"
         },
         "type": {
@@ -61,27 +43,35 @@
         "kind": "Identifier",
         "name": "t"
       },
-      "params": [],
-      "returnType": {
-        "kind": "ClassType",
-        "className": "<None>"
-      },
-      "declarations": [
+      "params": [
         {
-          "kind": "GlobalDecl",
-          "variable": {
+          "kind": "TypedVar",
+          "identifier": {
             "kind": "Identifier",
             "name": "x"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
           }
         },
         {
-          "kind": "GlobalDecl",
-          "variable": {
+          "kind": "TypedVar",
+          "identifier": {
             "kind": "Identifier",
-            "name": "y"
+            "name": "z"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
           }
         }
       ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "int"
+      },
+      "declarations": [],
       "statements": [
         {
           "kind": "AssignStmt",
@@ -109,18 +99,18 @@
           "targets": [
             {
               "kind": "Identifier",
-              "name": "y"
+              "name": "z"
             }
           ],
           "value": {
             "kind": "BinaryExpr",
             "left": {
               "kind": "Identifier",
-              "name": "y"
+              "name": "z"
             },
             "right": {
               "kind": "Identifier",
-              "name": "y"
+              "name": "z"
             },
             "operator": "+"
           }
@@ -131,7 +121,7 @@
             "kind": "CallExpr",
             "function": {
               "kind": "Identifier",
-              "name": "__assert__"
+              "name": "print"
             },
             "args": [
               {
@@ -148,6 +138,13 @@
               }
             ]
           }
+        },
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "Identifier",
+            "name": "x"
+          }
         }
       ]
     }
@@ -159,7 +156,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -178,25 +175,27 @@
       }
     },
     {
-      "kind": "ExprStmt",
-      "expr": {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "x"
+        }
+      ],
+      "value": {
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "t"
         },
         "args": [
           {
-            "kind": "BinaryExpr",
-            "left": {
-              "kind": "Identifier",
-              "name": "y"
-            },
-            "right": {
-              "kind": "StringLiteral",
-              "value": "a"
-            },
-            "operator": "=="
+            "kind": "Identifier",
+            "name": "x"
+          },
+          {
+            "kind": "Identifier",
+            "name": "z"
           }
         ]
       }
@@ -207,18 +206,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "t"
-        },
-        "args": []
-      }
-    },
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -230,30 +218,6 @@
             "right": {
               "kind": "IntegerLiteral",
               "value": 1
-            },
-            "operator": "=="
-          }
-        ]
-      }
-    },
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "__assert__"
-        },
-        "args": [
-          {
-            "kind": "BinaryExpr",
-            "left": {
-              "kind": "Identifier",
-              "name": "y"
-            },
-            "right": {
-              "kind": "StringLiteral",
-              "value": "aa"
             },
             "operator": "=="
           }

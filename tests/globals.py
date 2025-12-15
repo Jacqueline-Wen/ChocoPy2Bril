@@ -1,18 +1,14 @@
 x: int = 0
-y: str = "a"
 z: int = 0
 
 
-def t():
-    global x
-    global y
+def t(x: int, z: int) -> int:
     x = x + 1
-    y = y + y
-    assert z == 0
+    z = z + z
+    print(z == 0)
+    return x
 
 
-assert x == 0
-assert y == "a"
-t()
-assert x == 1
-assert y == "aa"
+print(x == 0)
+x = t(x, z)
+print(x == 1)
