@@ -1,7 +1,9 @@
-x: str = ""
-y: str = "123"
+x: int = 0
+y: int = 10
 
-for x in y:
-    pass
+while x < y:
+    x = x + 1
+    y = y - 1
 
-assert x == "3"
+print(x)
+print(y)

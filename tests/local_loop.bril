@@ -1,0 +1,28 @@
+@main: None {
+  _temp0: int = const 0;
+  x: int = id _temp0;
+  _temp1: int = const 10;
+  y: int = id _temp1;
+  jmp .while_header_0;
+.while_header_0:
+  _temp2: int = id x;
+  _temp3: int = id y;
+  _temp4: bool = lt _temp2 _temp3;
+  br _temp4 .while_body_1 .while_end_2;
+.while_body_1:
+  _temp5: int = id x;
+  _temp6: int = const 1;
+  _temp7: int = add _temp5 _temp6;
+  x: int = id _temp7;
+  _temp8: int = id y;
+  _temp9: int = const 1;
+  _temp10: int = sub _temp8 _temp9;
+  y: int = id _temp10;
+  jmp .while_header_0;
+.while_end_2:
+  _temp11: int = id x;
+  print _temp11;
+  _temp12: int = id y;
+  print _temp12;
+  ret;
+}

@@ -1,3 +1,188 @@
 {
-  "functions": []
+  "functions": [
+    {
+      "name": "main",
+      "args": [],
+      "instrs": [
+        {
+          "op": "const",
+          "dest": "_temp0",
+          "type": "int",
+          "value": 0
+        },
+        {
+          "op": "id",
+          "dest": "x",
+          "type": "int",
+          "args": [
+            "_temp0"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp1",
+          "type": "int",
+          "value": 10
+        },
+        {
+          "op": "id",
+          "dest": "y",
+          "type": "int",
+          "args": [
+            "_temp1"
+          ]
+        },
+        {
+          "op": "jmp",
+          "labels": [
+            "while_header_0"
+          ]
+        },
+        {
+          "label": "while_header_0"
+        },
+        {
+          "op": "id",
+          "dest": "_temp2",
+          "type": "int",
+          "args": [
+            "x"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp3",
+          "type": "int",
+          "args": [
+            "y"
+          ]
+        },
+        {
+          "op": "lt",
+          "dest": "_temp4",
+          "type": "bool",
+          "args": [
+            "_temp2",
+            "_temp3"
+          ]
+        },
+        {
+          "op": "br",
+          "args": [
+            "_temp4"
+          ],
+          "labels": [
+            "while_body_1",
+            "while_end_2"
+          ]
+        },
+        {
+          "label": "while_body_1"
+        },
+        {
+          "op": "id",
+          "dest": "_temp5",
+          "type": "int",
+          "args": [
+            "x"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp6",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "op": "add",
+          "dest": "_temp7",
+          "type": "int",
+          "args": [
+            "_temp5",
+            "_temp6"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "x",
+          "type": "int",
+          "args": [
+            "_temp7"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp8",
+          "type": "int",
+          "args": [
+            "y"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp9",
+          "type": "int",
+          "value": 1
+        },
+        {
+          "op": "sub",
+          "dest": "_temp10",
+          "type": "int",
+          "args": [
+            "_temp8",
+            "_temp9"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "y",
+          "type": "int",
+          "args": [
+            "_temp10"
+          ]
+        },
+        {
+          "op": "jmp",
+          "labels": [
+            "while_header_0"
+          ]
+        },
+        {
+          "label": "while_end_2"
+        },
+        {
+          "op": "id",
+          "dest": "_temp11",
+          "type": "int",
+          "args": [
+            "x"
+          ]
+        },
+        {
+          "op": "print",
+          "args": [
+            "_temp11"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp12",
+          "type": "int",
+          "args": [
+            "y"
+          ]
+        },
+        {
+          "op": "print",
+          "args": [
+            "_temp12"
+          ]
+        },
+        {
+          "op": "ret"
+        }
+      ],
+      "type": null
+    }
+  ]
 }
