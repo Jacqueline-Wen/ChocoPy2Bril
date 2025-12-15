@@ -1,0 +1,402 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "FuncDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "multiply"
+      },
+      "params": [
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "a"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        },
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "b"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "int"
+      },
+      "declarations": [],
+      "statements": [
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "a"
+            },
+            "right": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "operator": "*"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "FuncDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "cond"
+      },
+      "params": [
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "a"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        },
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "b"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        },
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "limit"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "bool"
+      },
+      "declarations": [],
+      "statements": [
+        {
+          "kind": "IfStmt",
+          "condition": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "a"
+            },
+            "right": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "operator": ">"
+          },
+          "thenBody": [
+            {
+              "kind": "ReturnStmt",
+              "value": {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "BinaryExpr",
+                  "left": {
+                    "kind": "Identifier",
+                    "name": "a"
+                  },
+                  "right": {
+                    "kind": "Identifier",
+                    "name": "b"
+                  },
+                  "operator": "-"
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "name": "limit"
+                },
+                "operator": "<"
+              }
+            }
+          ],
+          "elseBody": []
+        },
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "BinaryExpr",
+              "left": {
+                "kind": "Identifier",
+                "name": "b"
+              },
+              "right": {
+                "kind": "Identifier",
+                "name": "a"
+              },
+              "operator": "-"
+            },
+            "right": {
+              "kind": "Identifier",
+              "name": "limit"
+            },
+            "operator": "<"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "x"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 5
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "y"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 7
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "z"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 3
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "limit"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 4
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "res1"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "res2"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "res1"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "multiply"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "x"
+          },
+          {
+            "kind": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "res2"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "multiply"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "y"
+          },
+          {
+            "kind": "Identifier",
+            "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "res1"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "res2"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "cond"
+            },
+            "args": [
+              {
+                "kind": "Identifier",
+                "name": "res1"
+              },
+              {
+                "kind": "Identifier",
+                "name": "res2"
+              },
+              {
+                "kind": "Identifier",
+                "name": "limit"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

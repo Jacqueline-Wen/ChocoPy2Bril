@@ -1,0 +1,61 @@
+@multiply(a: int, b: int): int {
+  _temp0: int = id a;
+  _temp1: int = id b;
+  _temp2: int = mul _temp0 _temp1;
+  ret _temp2;
+}
+@cond(a: int, b: int, limit: int): bool {
+  _temp0: int = id a;
+  _temp1: int = id b;
+  _temp2: bool = gt _temp0 _temp1;
+  br _temp2 .then_0 .else_1;
+.then_0:
+  _temp3: int = id a;
+  _temp4: int = id b;
+  _temp5: int = sub _temp3 _temp4;
+  _temp6: int = id limit;
+  _temp7: bool = lt _temp5 _temp6;
+  ret _temp7;
+  jmp .endif_2;
+.else_1:
+  jmp .endif_2;
+.endif_2:
+  _temp8: int = id b;
+  _temp9: int = id a;
+  _temp10: int = sub _temp8 _temp9;
+  _temp11: int = id limit;
+  _temp12: bool = lt _temp10 _temp11;
+  ret _temp12;
+}
+@main: None {
+  _temp0: int = const 5;
+  x: int = id _temp0;
+  _temp1: int = const 7;
+  y: int = id _temp1;
+  _temp2: int = const 3;
+  z: int = id _temp2;
+  _temp3: int = const 4;
+  limit: int = id _temp3;
+  _temp4: int = const 0;
+  res1: int = id _temp4;
+  _temp5: int = const 0;
+  res2: int = id _temp5;
+  _temp6: int = id x;
+  _temp7: int = id y;
+  _temp8: int = call @multiply _temp6 _temp7;
+  res1: int = id _temp8;
+  _temp9: int = id y;
+  _temp10: int = id z;
+  _temp11: int = call @multiply _temp9 _temp10;
+  res2: int = id _temp11;
+  _temp12: int = id res1;
+  print _temp12;
+  _temp13: int = id res2;
+  print _temp13;
+  _temp14: int = id res1;
+  _temp15: int = id res2;
+  _temp16: int = id limit;
+  _temp17: bool = call @cond _temp14 _temp15 _temp16;
+  print _temp17;
+  ret;
+}
