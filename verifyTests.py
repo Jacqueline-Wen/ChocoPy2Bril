@@ -196,10 +196,87 @@ print("chocopy ", py_output)
 assert(bril_output.strip().lower() == py_output.strip().lower())
 print("[Test 7] incrementing_counter test successful\n")
 
-# int_and_bool_control_flow.py
+# Test 8: int_and_bool_control_flow.py
+print("[Test 8] Starting to process int_and_bool_control_flow")
+bril_result = subprocess.run(
+    "brili < tests/int_and_bool_control_flow.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/int_and_bool_control_flow.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 8] int_and_bool_control_flow test successful\n")
+
 # int_and_bool.py
-# linked_list.py
+print("[Test 9] Starting to process int_and_bool")
+bril_result = subprocess.run(
+    "brili < tests/int_and_bool.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/int_and_bool.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 9] int_and_bool test successful\n")
+
 # local_loop.py
+print("[Test 10] Starting to process local_loop")
+bril_result = subprocess.run(
+    "brili < tests/local_loop.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/local_loop.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 10] local_loop test successful\n")
+
 # modulo.py
 # nested_list.py
 # null_and_empty_list_compare.py
