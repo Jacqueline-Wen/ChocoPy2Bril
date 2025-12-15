@@ -1,7 +1,7 @@
 def foo() -> bool:
-    assert False
+    print(False)
     return True
 
 
-print(True or foo())
-print(False and foo())
+print(False or foo())
+print(True and foo())

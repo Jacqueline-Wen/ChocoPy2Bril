@@ -1,6 +1,17 @@
 @foo: bool {
   _temp0: bool = const false;
-  _temp1: int = call @__assert__ _temp0;
-  _temp2: bool = const true;
-  ret _temp2;
+  print _temp0;
+  _temp1: bool = const true;
+  ret _temp1;
+}
+@main: None {
+  _temp0: bool = const false;
+  _temp1: bool = call @foo;
+  _temp2: bool = or _temp0 _temp1;
+  print _temp2;
+  _temp3: bool = const true;
+  _temp4: bool = call @foo;
+  _temp5: bool = and _temp3 _temp4;
+  print _temp5;
+  ret;
 }

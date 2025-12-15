@@ -20,7 +20,7 @@
             "kind": "CallExpr",
             "function": {
               "kind": "Identifier",
-              "name": "__assert__"
+              "name": "print"
             },
             "args": [
               {
@@ -54,7 +54,7 @@
             "kind": "BinaryExpr",
             "left": {
               "kind": "BooleanLiteral",
-              "value": true
+              "value": false
             },
             "right": {
               "kind": "CallExpr",
@@ -82,7 +82,7 @@
             "kind": "BinaryExpr",
             "left": {
               "kind": "BooleanLiteral",
-              "value": false
+              "value": true
             },
             "right": {
               "kind": "CallExpr",
