@@ -1,0 +1,237 @@
+@main: None {
+  _temp0: int = const 0;
+  b: int = id _temp0;
+  _temp1: int = const 0;
+  b: int = id _temp1;
+  _temp2: int = id b;
+  _temp3: int = const 0;
+  _temp4: bool = eq _temp2 _temp3;
+  br _temp4 .then_0 .else_1;
+.then_0:
+  _temp5: int = const 1;
+  b: int = id _temp5;
+  jmp .endif_2;
+.else_1:
+  jmp .endif_2;
+.endif_2:
+  _temp6: int = id b;
+  _temp7: int = const 1;
+  _temp8: bool = eq _temp6 _temp7;
+  print _temp8;
+  _temp9: int = const 0;
+  b: int = id _temp9;
+  _temp10: int = id b;
+  _temp11: int = const 0;
+  _temp12: bool = lt _temp10 _temp11;
+  br _temp12 .then_3 .else_4;
+.then_3:
+  _temp13: int = const 2;
+  b: int = id _temp13;
+  jmp .endif_5;
+.else_4:
+  jmp .endif_5;
+.endif_5:
+  _temp14: int = id b;
+  _temp15: int = const 0;
+  _temp16: bool = eq _temp14 _temp15;
+  print _temp16;
+  _temp17: int = const 0;
+  b: int = id _temp17;
+  _temp18: int = id b;
+  _temp19: int = const 0;
+  _temp20: bool = lt _temp18 _temp19;
+  br _temp20 .then_6 .else_7;
+.then_6:
+  _temp21: int = const 0;
+  b: int = id _temp21;
+  jmp .endif_8;
+.else_7:
+  _temp22: int = const 1;
+  b: int = id _temp22;
+  jmp .endif_8;
+.endif_8:
+  _temp23: int = id b;
+  _temp24: int = const 1;
+  _temp25: bool = eq _temp23 _temp24;
+  print _temp25;
+  _temp26: int = const 0;
+  b: int = id _temp26;
+  _temp27: int = id b;
+  _temp28: int = const 0;
+  _temp29: bool = eq _temp27 _temp28;
+  br _temp29 .then_9 .else_10;
+.then_9:
+  _temp30: int = const 1;
+  b: int = id _temp30;
+  jmp .endif_11;
+.else_10:
+  _temp31: int = const 0;
+  b: int = id _temp31;
+  jmp .endif_11;
+.endif_11:
+  _temp32: int = id b;
+  _temp33: int = const 1;
+  _temp34: bool = eq _temp32 _temp33;
+  print _temp34;
+  _temp35: int = const 0;
+  b: int = id _temp35;
+  _temp36: int = id b;
+  _temp37: int = const 0;
+  _temp38: bool = gt _temp36 _temp37;
+  br _temp38 .then_12 .else_13;
+.then_12:
+  _temp39: int = const 0;
+  b: int = id _temp39;
+  jmp .endif_14;
+.else_13:
+  _temp40: int = id b;
+  _temp41: int = const 0;
+  _temp42: bool = lt _temp40 _temp41;
+  br _temp42 .then_15 .else_16;
+.then_15:
+  _temp43: int = const 0;
+  b: int = id _temp43;
+  jmp .endif_17;
+.else_16:
+  _temp44: int = const 1;
+  b: int = id _temp44;
+  jmp .endif_17;
+.endif_17:
+  jmp .endif_14;
+.endif_14:
+  _temp45: int = id b;
+  _temp46: int = const 1;
+  _temp47: bool = eq _temp45 _temp46;
+  print _temp47;
+  _temp48: int = const 0;
+  b: int = id _temp48;
+  _temp49: int = id b;
+  _temp50: int = const 0;
+  _temp51: bool = eq _temp49 _temp50;
+  br _temp51 .then_18 .else_19;
+.then_18:
+  jmp .endif_20;
+.else_19:
+  _temp52: int = id b;
+  _temp53: int = const 0;
+  _temp54: bool = lt _temp52 _temp53;
+  br _temp54 .then_21 .else_22;
+.then_21:
+  _temp55: int = const 1;
+  b: int = id _temp55;
+  jmp .endif_23;
+.else_22:
+  _temp56: int = const 1;
+  b: int = id _temp56;
+  jmp .endif_23;
+.endif_23:
+  jmp .endif_20;
+.endif_20:
+  _temp57: int = id b;
+  _temp58: int = const 0;
+  _temp59: bool = eq _temp57 _temp58;
+  print _temp59;
+  _temp60: int = const 5;
+  b: int = id _temp60;
+  _temp61: int = id b;
+  _temp62: int = const 0;
+  _temp63: bool = eq _temp61 _temp62;
+  br _temp63 .then_24 .else_25;
+.then_24:
+  _temp64: int = const 1;
+  b: int = id _temp64;
+  jmp .endif_26;
+.else_25:
+  _temp65: int = id b;
+  _temp66: int = const 0;
+  _temp67: bool = lt _temp65 _temp66;
+  br _temp67 .then_27 .else_28;
+.then_27:
+  _temp68: int = const 2;
+  b: int = id _temp68;
+  jmp .endif_29;
+.else_28:
+  jmp .endif_29;
+.endif_29:
+  jmp .endif_26;
+.endif_26:
+  _temp69: int = id b;
+  _temp70: int = const 5;
+  _temp71: bool = eq _temp69 _temp70;
+  print _temp71;
+  _temp72: int = const 1;
+  _temp74: int = const 0;
+  _temp73: int = sub _temp74 _temp72;
+  b: int = id _temp73;
+  _temp75: int = id b;
+  _temp76: int = const 0;
+  _temp77: bool = gt _temp75 _temp76;
+  br _temp77 .then_30 .else_31;
+.then_30:
+  _temp78: int = const 0;
+  b: int = id _temp78;
+  jmp .endif_32;
+.else_31:
+  _temp79: int = id b;
+  _temp80: int = const 0;
+  _temp81: bool = lt _temp79 _temp80;
+  br _temp81 .then_33 .else_34;
+.then_33:
+  _temp82: int = const 1;
+  b: int = id _temp82;
+  jmp .endif_35;
+.else_34:
+  _temp83: int = const 0;
+  b: int = id _temp83;
+  jmp .endif_35;
+.endif_35:
+  jmp .endif_32;
+.endif_32:
+  _temp84: int = id b;
+  _temp85: int = const 1;
+  _temp86: bool = eq _temp84 _temp85;
+  print _temp86;
+  _temp87: int = const 1;
+  _temp89: int = const 0;
+  _temp88: int = sub _temp89 _temp87;
+  b: int = id _temp88;
+  jmp .while_header_36;
+.while_header_36:
+  _temp90: int = id b;
+  _temp91: int = const 0;
+  _temp92: bool = gt _temp90 _temp91;
+  br _temp92 .while_body_37 .while_end_38;
+.while_body_37:
+  _temp93: int = id b;
+  _temp94: int = const 1;
+  _temp95: int = sub _temp93 _temp94;
+  b: int = id _temp95;
+  jmp .while_header_36;
+.while_end_38:
+  _temp96: int = id b;
+  _temp97: int = const 1;
+  _temp99: int = const 0;
+  _temp98: int = sub _temp99 _temp97;
+  _temp100: bool = eq _temp96 _temp98;
+  print _temp100;
+  _temp101: int = const 5;
+  b: int = id _temp101;
+  jmp .while_header_39;
+.while_header_39:
+  _temp102: int = id b;
+  _temp103: int = const 0;
+  _temp104: bool = gt _temp102 _temp103;
+  br _temp104 .while_body_40 .while_end_41;
+.while_body_40:
+  _temp105: int = id b;
+  _temp106: int = const 1;
+  _temp107: int = sub _temp105 _temp106;
+  b: int = id _temp107;
+  jmp .while_header_39;
+.while_end_41:
+  _temp108: int = id b;
+  _temp109: int = const 0;
+  _temp110: bool = eq _temp108 _temp109;
+  print _temp110;
+  ret;
+}

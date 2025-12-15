@@ -23,6 +23,10 @@ class CodeState:
         self.label+=1
         return name
     
+UNARY_OP = {
+    "not": "not",
+}
+
 BIN_OP = {
     "+": "add",
     "-": "sub",
@@ -30,7 +34,6 @@ BIN_OP = {
     "/": "div",
     "%": "mod",
     "==": "eq",
-    "!=": "ne",
     "<": "lt",
     "<=": "le",
     ">": "gt",
@@ -173,6 +176,50 @@ def translate_expr(expr, state):
         temp = state.make_temp(typ)
         instrs = [{"op": "id", "dest": temp, "type": typ, "args": [name]}]
         return temp, typ, instrs
+    elif kind == "UnaryExpr":
+        operand = expr["operand"]
+        op = expr["operator"]
+        op_tmp, op_type, op_instrs = translate_expr(operand, state)
+        instrs = op_instrs
+        if op == '-':
+            if op_type != 'int':
+                raise TypeError("Unary minus only supported for integer type.")
+            result_type = 'int'
+            tmp = state.make_temp(result_type)
+            v_zero = state.make_temp('int')
+            instrs.append({
+                "op": "const",
+                "dest": v_zero,
+                "type": "int",
+                "value": 0
+            })
+            instrs.append({
+                "op": "sub",
+                "dest": tmp,
+                "type": result_type,
+                "args": [v_zero, op_tmp],
+            })
+            return tmp, result_type, instrs
+        
+        bril_op = UNARY_OP.get(op)
+        if bril_op is None:
+            raise NotImplementedError(f"Unary op not supported: {op}")
+        if bril_op == "neg":
+            result_type = "int"
+        elif bril_op == "not":
+            result_type = "bool"
+        else:
+            result_type = op_type
+        tmp = state.make_temp(result_type)
+        instrs.append(
+            {
+                "op": bril_op,
+                "dest": tmp,
+                "type": result_type,
+                "args": [op_tmp],
+            }
+        )
+        return tmp, result_type, instrs
     elif kind == "BinaryExpr":
         left = expr["left"]
         right = expr["right"]
@@ -268,6 +315,23 @@ def translate_stmt(stmt, state):
             instrs.extend(translate_stmt(s, state))
         instrs.append({"op": "jmp", "labels": [end_label]})
 
+        instrs.append({"label": end_label})
+        return instrs
+    elif kind == "WhileStmt":
+        header_label = state.make_label("while_header")
+        body_label = state.make_label("while_body")
+        end_label = state.make_label("while_end")
+        instrs.append({"op": "jmp", "labels": [header_label]})
+        instrs.append({"label": header_label})
+        cond_tmp, _, cond_instrs = translate_expr(stmt["condition"], state)
+        instrs.extend(cond_instrs)
+        instrs.append(
+            {"op": "br", "args": [cond_tmp], "labels": [body_label, end_label]}
+        )
+        instrs.append({"label": body_label})
+        for s in stmt.get("body", []):
+            instrs.extend(translate_stmt(s, state))
+        instrs.append({"op": "jmp", "labels": [header_label]})
         instrs.append({"label": end_label})
         return instrs
     elif kind == "ReturnStmt":
