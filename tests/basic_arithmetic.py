@@ -4,16 +4,18 @@ def add(a: int, b: int) -> int:
 x: int = 7
 y: int = 3
 active: bool = True
-
-if active and x != y:
-    print("x is not equal to y and active")
-else:
-    print("x equals y or inactive")
-
-sum_val: int = add(x, y)
-print("Sum:", sum_val)
-
+sum_val: int = 0
 i: int = 0
+
+if active and not x == y:
+    print(False)
+else:
+    print(True)
+
+sum_val = add(x, y)
+print(sum_val)
+
 while i < 3:
-    print("i =", i, "x - i =", x - i)
+    print(i)
+    print(x - i)
     i = i + 1

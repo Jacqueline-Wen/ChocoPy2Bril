@@ -1,0 +1,60 @@
+@add(a: int, b: int): int {
+  _temp0: int = id a;
+  _temp1: int = id b;
+  _temp2: int = add _temp0 _temp1;
+  ret _temp2;
+}
+@main: None {
+  _temp0: int = const 7;
+  x: int = id _temp0;
+  _temp1: int = const 3;
+  y: int = id _temp1;
+  _temp2: bool = const true;
+  active: bool = id _temp2;
+  _temp3: int = const 0;
+  sum_val: int = id _temp3;
+  _temp4: int = const 0;
+  i: int = id _temp4;
+  _temp5: bool = id active;
+  _temp6: int = id x;
+  _temp7: int = id y;
+  _temp8: bool = eq _temp6 _temp7;
+  _temp9: bool = not _temp8;
+  _temp10: bool = and _temp5 _temp9;
+  br _temp10 .then_0 .else_1;
+.then_0:
+  _temp11: bool = const false;
+  print _temp11;
+  jmp .endif_2;
+.else_1:
+  _temp12: bool = const true;
+  print _temp12;
+  jmp .endif_2;
+.endif_2:
+  _temp13: int = id x;
+  _temp14: int = id y;
+  _temp15: int = call @add _temp13 _temp14;
+  sum_val: int = id _temp15;
+  _temp16: int = id sum_val;
+  print _temp16;
+  jmp .while_header_3;
+.while_header_3:
+  _temp17: int = id i;
+  _temp18: int = const 3;
+  _temp19: bool = lt _temp17 _temp18;
+  br _temp19 .while_body_4 .while_end_5;
+.while_body_4:
+  _temp20: int = id i;
+  print _temp20;
+  _temp21: int = id x;
+  _temp22: int = id i;
+  _temp23: int = sub _temp21 _temp22;
+  print _temp23;
+  _temp24: int = id i;
+  _temp25: int = const 1;
+  _temp26: int = add _temp24 _temp25;
+  i: int = id _temp26;
+  jmp .while_header_3;
+.while_end_5:
+  ret;
+}

@@ -1,0 +1,337 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "FuncDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "add"
+      },
+      "params": [
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "a"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        },
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "b"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "int"
+      },
+      "declarations": [],
+      "statements": [
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "a"
+            },
+            "right": {
+              "kind": "Identifier",
+              "name": "b"
+            },
+            "operator": "+"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "x"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 7
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "y"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 3
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "active"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "bool"
+        }
+      },
+      "value": {
+        "kind": "BooleanLiteral",
+        "value": true
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "sum_val"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "i"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 0
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "IfStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "active"
+        },
+        "right": {
+          "kind": "UnaryExpr",
+          "operator": "not",
+          "operand": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "x"
+            },
+            "right": {
+              "kind": "Identifier",
+              "name": "y"
+            },
+            "operator": "=="
+          }
+        },
+        "operator": "and"
+      },
+      "thenBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "elseBody": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "BooleanLiteral",
+                "value": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "sum_val"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "add"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "x"
+          },
+          {
+            "kind": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "sum_val"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "WhileStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "i"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 3
+        },
+        "operator": "<"
+      },
+      "body": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "Identifier",
+                "name": "i"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "Identifier",
+                  "name": "x"
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "name": "i"
+                },
+                "operator": "-"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "i"
+            }
+          ],
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "i"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "+"
+          }
+        }
+      ]
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}
