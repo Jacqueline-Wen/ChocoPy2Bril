@@ -1,0 +1,9 @@
+{
+  "kind": "Program",
+  "declarations": [],
+  "statements": [],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}
