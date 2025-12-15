@@ -10,9 +10,7 @@ with redirect_stdout(buf):
 # regenerating bril files for all tests
 # subprocess.run("for file in tests/*.py; do echo \"Running on $file\"; python3 chocopybril.py \"$file\"; done", shell=True)
 
-# manually hard code test cases
-
-# add_one.py
+# Test 1: add_one.py
 print("[Test 1] Starting to process add_one")
 rnum = random.randint(1, 10)
 bril_result = subprocess.run(
@@ -36,7 +34,7 @@ print("chocopy ", py_output)
 assert(bril_output == py_output)
 print("[Test 1] add_one test successful\n")
 
-# assignment.py
+# Test 2: assignment.py
 print("[Test 2] Starting to process assignment")
 bril_result = subprocess.run(
     "brili < tests/assignment.json",
@@ -63,10 +61,60 @@ print("chocopy ", py_output)
 assert(bril_output.strip().lower() == py_output.strip().lower())
 print("[Test 2] assignment test successful\n")
 
-# classes.py
-# control_flow_2.py
-# control_flow.py
+# Test3: control_flow_2.py
+print("[Test 3] Starting to process control flow 2")
+bril_result = subprocess.run(
+    "brili < tests/control_flow_2.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/control_flow_2.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 3] control flow 2 test successful\n")
+
 # exponent.py
+print("[Test 4] Starting to process exponent")
+bril_result = subprocess.run(
+    "brili < tests/exponent.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/exponent.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+# assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 4] exponent test successful\n")
+
 # expr_stmt.py
 # globals.py
 # hello_world.py
