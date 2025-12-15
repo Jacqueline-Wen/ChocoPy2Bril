@@ -2,7 +2,10 @@ import subprocess
 import io
 from contextlib import redirect_stdout
 import random
-import tests.add_one as add_one
+
+buf = io.StringIO()
+with redirect_stdout(buf):
+    import tests.add_one
 
 # regenerating bril files for all tests
 # subprocess.run("for file in tests/*.py; do echo \"Running on $file\"; python3 chocopybril.py \"$file\"; done", shell=True)
@@ -10,6 +13,7 @@ import tests.add_one as add_one
 # manually hard code test cases
 
 # add_one.py
+print("[Test 1] Starting to process add_one")
 rnum = random.randint(1, 10)
 bril_result = subprocess.run(
     f"brili {rnum} < tests/add_one.json",
@@ -24,15 +28,41 @@ print("bril ", bril_output)
 
 buf = io.StringIO()
 with redirect_stdout(buf):
-    add_one.main(rnum)
+    tests.add_one.main(rnum)
 
 py_output = buf.getvalue().strip()
 print("chocopy ", py_output)
 
 assert(bril_output == py_output)
-print("add_one test successful")
+print("[Test 1] add_one test successful\n")
 
 # assignment.py
+print("[Test 2] Starting to process assignment")
+bril_result = subprocess.run(
+    "brili < tests/assignment.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/assignment.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 2] assignment test successful\n")
+
 # classes.py
 # control_flow_2.py
 # control_flow.py
