@@ -6,6 +6,23 @@ subprocess.run("for file in tests/*.py; do echo \"Running on $file\"; python3 ch
 # manually hard code test cases
 
 # add_one.py
+# subprocess.run("brili 5 < tests/add_one.json", shell=True)
+
+bril_result = subprocess.run(
+    "brili 5 < tests/add_one.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print(repr(bril_output))
+
+py_result = subprocess.run(
+    
+)
+
 # assignment.py
 # classes.py
 # control_flow_2.py
