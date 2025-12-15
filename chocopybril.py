@@ -110,13 +110,13 @@ def translate_func_def(f, func_ret_types):
             instrs.append({"op": "ret"})
         else:
             if ret_type == "int":
-                t0 = s.new_temp("int")
+                t0 = s.make_temp("int")
                 instrs.append(
                     {"op": "const", "dest": t0, "type": "int", "value": 0}
                 )
                 instrs.append({"op": "ret", "args": [t0]})
             elif ret_type == "bool":
-                t0 = s.new_temp("bool")
+                t0 = s.make_temp("bool")
                 instrs.append(
                     {"op": "const", "dest": t0, "type": "bool", "value": False}
                 )
@@ -157,6 +157,7 @@ def is_print_call(expr):
 
 def translate_expr(expr, state):
     kind = expr.get("kind")
+    print(expr, kind)
 
     if kind == "IntegerLiteral":
         temp = state.make_temp("int")

@@ -1,9 +1,112 @@
-@exp(x: int, y: int): int {
-  _temp0: int = const 0;
-  a: int = id _temp0;
-  _temp1: int = const 1;
-  a: int = id _temp1;
-  _temp2: int = id y;
-  _temp3: int = call @f _temp2;
+@f(i: int, x: int, a: int): int {
+  _temp0: int = id i;
+  _temp1: int = const 0;
+  _temp2: bool = le _temp0 _temp1;
+  br _temp2 .then_0 .else_1;
+.then_0:
+  _temp3: int = id a;
   ret _temp3;
+  jmp .endif_2;
+.else_1:
+  _temp4: int = id a;
+  _temp5: int = id x;
+  _temp6: int = mul _temp4 _temp5;
+  a: int = id _temp6;
+  _temp7: int = id i;
+  _temp8: int = const 1;
+  _temp9: int = sub _temp7 _temp8;
+  _temp10: int = id x;
+  _temp11: int = id a;
+  _temp12: int = call @f _temp9 _temp10 _temp11;
+  ret _temp12;
+  jmp .endif_2;
+.endif_2:
+  _temp13: int = const 0;
+  ret _temp13;
+}
+@exp(x: int, y: int): int {
+  _temp0: int = const 1;
+  a: int = id _temp0;
+  _temp1: int = id y;
+  _temp2: int = id x;
+  _temp3: int = id a;
+  _temp4: int = call @f _temp1 _temp2 _temp3;
+  ret _temp4;
+}
+@main: None {
+  _temp0: int = const 42;
+  n: int = id _temp0;
+  _temp1: int = const 0;
+  i: int = id _temp1;
+  _temp2: int = const 0;
+  exponent_val: int = id _temp2;
+  jmp .while_header_0;
+.while_header_0:
+  _temp3: int = id i;
+  _temp4: int = id n;
+  _temp5: bool = le _temp3 _temp4;
+  br _temp5 .while_body_1 .while_end_2;
+.while_body_1:
+  _temp6: int = const 2;
+  _temp7: int = id exponent_val;
+  _temp8: int = call @exp _temp6 _temp7;
+  print _temp8;
+  _temp9: int = id i;
+  _temp10: int = const 1;
+  _temp11: int = add _temp9 _temp10;
+  i: int = id _temp11;
+  _temp12: int = id exponent_val;
+  _temp13: int = const 30;
+  _temp14: bool = eq _temp12 _temp13;
+  br _temp14 .then_3 .else_4;
+.then_3:
+  _temp15: int = const 0;
+  exponent_val: int = id _temp15;
+  jmp .endif_5;
+.else_4:
+  _temp16: int = id exponent_val;
+  _temp17: int = const 1;
+  _temp18: int = add _temp16 _temp17;
+  exponent_val: int = id _temp18;
+  jmp .endif_5;
+.endif_5:
+  jmp .while_header_0;
+.while_end_2:
+  _temp19: int = const 2;
+  _temp20: int = const 3;
+  _temp21: int = call @exp _temp19 _temp20;
+  _temp22: int = const 8;
+  _temp23: bool = eq _temp21 _temp22;
+  print _temp23;
+  _temp24: int = const 3;
+  _temp25: int = const 3;
+  _temp26: int = call @exp _temp24 _temp25;
+  _temp27: int = const 27;
+  _temp28: bool = eq _temp26 _temp27;
+  print _temp28;
+  _temp29: int = const 3;
+  _temp30: int = const 4;
+  _temp31: int = call @exp _temp29 _temp30;
+  _temp32: int = const 81;
+  _temp33: bool = eq _temp31 _temp32;
+  print _temp33;
+  _temp34: int = const 4;
+  _temp35: int = const 4;
+  _temp36: int = call @exp _temp34 _temp35;
+  _temp37: int = const 256;
+  _temp38: bool = eq _temp36 _temp37;
+  print _temp38;
+  _temp39: int = const 5;
+  _temp40: int = const 1;
+  _temp41: int = call @exp _temp39 _temp40;
+  _temp42: int = const 5;
+  _temp43: bool = eq _temp41 _temp42;
+  print _temp43;
+  _temp44: int = const 1;
+  _temp45: int = const 99;
+  _temp46: int = call @exp _temp44 _temp45;
+  _temp47: int = const 1;
+  _temp48: bool = eq _temp46 _temp47;
+  print _temp48;
+  ret;
 }
