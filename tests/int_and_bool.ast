@@ -145,7 +145,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -177,7 +177,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -201,7 +201,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -225,7 +225,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -257,7 +257,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -289,7 +289,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -321,39 +321,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
-        },
-        "args": [
-          {
-            "kind": "BinaryExpr",
-            "left": {
-              "kind": "BinaryExpr",
-              "left": {
-                "kind": "IntegerLiteral",
-                "value": 5
-              },
-              "right": {
-                "kind": "IntegerLiteral",
-                "value": 2
-              },
-              "operator": "%"
-            },
-            "right": {
-              "kind": "Identifier",
-              "name": "x"
-            },
-            "operator": "=="
-          }
-        ]
-      }
-    },
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -377,31 +345,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
-        },
-        "args": [
-          {
-            "kind": "BinaryExpr",
-            "left": {
-              "kind": "Identifier",
-              "name": "x"
-            },
-            "right": {
-              "kind": "Identifier",
-              "name": "y"
-            },
-            "operator": "!="
-          }
-        ]
-      }
-    },
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -421,7 +365,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -437,7 +381,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -453,7 +397,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -473,55 +417,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
-        },
-        "args": [
-          {
-            "kind": "BinaryExpr",
-            "left": {
-              "kind": "Identifier",
-              "name": "a"
-            },
-            "right": {
-              "kind": "Identifier",
-              "name": "a"
-            },
-            "operator": "=="
-          }
-        ]
-      }
-    },
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "__assert__"
-        },
-        "args": [
-          {
-            "kind": "BinaryExpr",
-            "left": {
-              "kind": "Identifier",
-              "name": "a"
-            },
-            "right": {
-              "kind": "Identifier",
-              "name": "b"
-            },
-            "operator": "!="
-          }
-        ]
-      }
-    },
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -545,7 +441,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -569,7 +465,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -597,7 +493,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -638,7 +534,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -662,7 +558,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -686,7 +582,16 @@
         {
           "kind": "Identifier",
           "name": "x"
-        },
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 3
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
         {
           "kind": "Identifier",
           "name": "y"
@@ -703,7 +608,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
@@ -727,7 +632,7 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {

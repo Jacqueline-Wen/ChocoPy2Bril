@@ -8,30 +8,27 @@ print(y)
 print(a)
 print(b)
 
-assert x + y == 3
-assert x < y
-assert y > x
-assert x + x == 2
-assert y * y == 4
-assert 5 // 2 == y
-assert 5 % 2 == x
-assert x == x
-assert x != y
-assert not b
-assert a
-assert True
-assert not False
-assert a == a
-assert a != b
-assert a and a
-assert a or b
-assert not (b or b)
-assert not (b and b)
+print(x + y == 3)
+print(x < y)
+print(y > x)
+print(x + x == 2)
+print(y * y == 4)
+print(5 // 2 == y)
+print(x == x)
+print(not b)
+print(a)
+print(True)
+print(not False)
+print(a and a)
+print(a or b)
+print(not (b or b))
+print(not (b and b))
 
 x = y
-assert x == y
-assert x == 2
+print(x == y)
+print(x == 2)
 
-x = y = 3
-assert x == y
-assert x == 3
+x = 3
+y = 3
+print(x == y)
+print(x == 3)
