@@ -1,0 +1,293 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "FuncDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "check_relational"
+      },
+      "params": [
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "x"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        },
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "y"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "bool"
+      },
+      "declarations": [],
+      "statements": [
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "Identifier",
+                  "name": "x"
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "name": "y"
+                },
+                "operator": "=="
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "UnaryExpr",
+                "operator": "not",
+                "operand": {
+                  "kind": "BinaryExpr",
+                  "left": {
+                    "kind": "Identifier",
+                    "name": "x"
+                  },
+                  "right": {
+                    "kind": "Identifier",
+                    "name": "y"
+                  },
+                  "operator": "=="
+                }
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "Identifier",
+                  "name": "x"
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "name": "y"
+                },
+                "operator": "<"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "Identifier",
+                  "name": "x"
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "name": "y"
+                },
+                "operator": "<="
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "Identifier",
+                  "name": "x"
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "name": "y"
+                },
+                "operator": ">"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ExprStmt",
+          "expr": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "print"
+            },
+            "args": [
+              {
+                "kind": "BinaryExpr",
+                "left": {
+                  "kind": "Identifier",
+                  "name": "x"
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "name": "y"
+                },
+                "operator": ">="
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "BooleanLiteral",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "FuncDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "main"
+      },
+      "params": [
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "a"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        },
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "b"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "int"
+      },
+      "declarations": [
+        {
+          "kind": "VarDef",
+          "var": {
+            "kind": "TypedVar",
+            "identifier": {
+              "kind": "Identifier",
+              "name": "check"
+            },
+            "type": {
+              "kind": "ClassType",
+              "className": "bool"
+            }
+          },
+          "value": {
+            "kind": "BooleanLiteral",
+            "value": true
+          }
+        }
+      ],
+      "statements": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "check"
+            }
+          ],
+          "value": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "check_relational"
+            },
+            "args": [
+              {
+                "kind": "Identifier",
+                "name": "a"
+              },
+              {
+                "kind": "Identifier",
+                "name": "b"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "IntegerLiteral",
+            "value": 0
+          }
+        }
+      ]
+    }
+  ],
+  "statements": [],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

@@ -1,0 +1,39 @@
+@check_relational(x: int, y: int): bool {
+  _temp0: int = id x;
+  _temp1: int = id y;
+  _temp2: bool = eq _temp0 _temp1;
+  print _temp2;
+  _temp3: int = id x;
+  _temp4: int = id y;
+  _temp5: bool = eq _temp3 _temp4;
+  _temp6: bool = not _temp5;
+  print _temp6;
+  _temp7: int = id x;
+  _temp8: int = id y;
+  _temp9: bool = lt _temp7 _temp8;
+  print _temp9;
+  _temp10: int = id x;
+  _temp11: int = id y;
+  _temp12: bool = le _temp10 _temp11;
+  print _temp12;
+  _temp13: int = id x;
+  _temp14: int = id y;
+  _temp15: bool = gt _temp13 _temp14;
+  print _temp15;
+  _temp16: int = id x;
+  _temp17: int = id y;
+  _temp18: bool = ge _temp16 _temp17;
+  print _temp18;
+  _temp19: bool = const true;
+  ret _temp19;
+}
+@main(a: int, b: int): int {
+  _temp0: bool = const true;
+  check: bool = id _temp0;
+  _temp1: int = id a;
+  _temp2: int = id b;
+  _temp3: bool = call @check_relational _temp1 _temp2;
+  check: bool = id _temp3;
+  _temp4: int = const 0;
+  ret _temp4;
+}
