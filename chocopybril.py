@@ -62,24 +62,24 @@ def translate_prog(ast_dict):
 
     
     #building main
-    # if global_vardefs or statements:
-    #     state = CodeState(func_ret_types=func_ret_types)
-    #     instrs = []
+    if global_vardefs or statements:
+        state = CodeState(func_ret_types=func_ret_types)
+        instrs = []
         
-    #     for gv in global_vardefs:
-    #         instrs.extend(translate_var_def(gv, state))
-    #     for stmt in statements:
-    #         instrs.extend(translate_stmt(stmt, state))
-    #     if not instrs or instrs[-1].get("op") != "ret":
-    #         instrs.append({"op": "ret"})
-    #     functions.append(
-    #         {
-    #             "name": "main",
-    #             "args": [],
-    #             "instrs": instrs,
-    #             "type": None,
-    #         }
-    #     )
+        for gv in global_vardefs:
+            instrs.extend(translate_var_def(gv, state))
+        for stmt in statements:
+            instrs.extend(translate_stmt(stmt, state))
+        if not instrs or instrs[-1].get("op") != "ret":
+            instrs.append({"op": "ret"})
+        functions.append(
+            {
+                "name": "main",
+                "args": [],
+                "instrs": instrs,
+                "type": None,
+            }
+        )
     return {"functions": functions}
 
 
@@ -221,7 +221,6 @@ def translate_expr(expr, state):
             }
         )
         return temp, ret_type, instrs
-
     
     raise NotImplementedError(f"Expression kind not supported yet {kind}")
 

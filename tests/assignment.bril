@@ -1,0 +1,33 @@
+@main: None {
+  _temp0: int = const 1;
+  x: int = id _temp0;
+  _temp1: int = const 2;
+  y: int = id _temp1;
+  _temp2: bool = const true;
+  a: bool = id _temp2;
+  _temp3: bool = const false;
+  b: bool = id _temp3;
+  _temp4: bool = id a;
+  b: bool = id _temp4;
+  _temp5: int = id y;
+  x: int = id _temp5;
+  _temp6: int = const 2;
+  x: int = id _temp6;
+  _temp7: int = const 2;
+  y: int = id _temp7;
+  _temp8: int = const 0;
+  x: int = id _temp8;
+  _temp9: int = const 0;
+  y: int = id _temp9;
+  _temp10: bool = const false;
+  b: bool = id _temp10;
+  _temp11: int = id x;
+  print _temp11;
+  _temp12: int = id y;
+  print _temp12;
+  _temp13: bool = id a;
+  print _temp13;
+  _temp14: bool = id b;
+  print _temp14;
+  ret;
+}
