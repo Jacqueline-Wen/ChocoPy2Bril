@@ -170,7 +170,32 @@ assert(bril_output.strip().lower() == py_output.strip().lower())
 print("[Test 6] hello_world test successful\n")
 
 # incrementing_counter.py
-# inherit_init.py
+print("[Test 7] Starting to process incrementing_counter")
+bril_result = subprocess.run(
+    "brili < tests/incrementing_counter.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/incrementing_counter.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 7] incrementing_counter test successful\n")
+
 # int_and_bool_control_flow.py
 # int_and_bool.py
 # linked_list.py
