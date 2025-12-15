@@ -1,15 +1,13 @@
 def is_even(n: int) -> bool:
-    return n % 2 == 0
+    half = n // 2
+    return n == half * 2
 
 x: int = 8
 y: int = 5
 
-if is_even(x) and not is_even(y):
-    print("x is even and y is odd")
-else:
-    print("x is not even or y is not odd")
-
-i: int = 0
-while i < 3:
-    print("i =", i, "i % 2 == 0?", is_even(i))
-    i = i + 1
+is_even_x: bool = False
+is_even_y: bool = False
+is_even_x = is_even(x)
+is_even_y = is_even(y)
+print(is_even_x)
+print(is_even_y)

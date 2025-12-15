@@ -1,0 +1,230 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "FuncDef",
+      "name": {
+        "kind": "Identifier",
+        "name": "is_even"
+      },
+      "params": [
+        {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "n"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "bool"
+      },
+      "declarations": [],
+      "statements": [
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "half"
+            }
+          ],
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "n"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 2
+            },
+            "operator": "//"
+          }
+        },
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "n"
+            },
+            "right": {
+              "kind": "BinaryExpr",
+              "left": {
+                "kind": "Identifier",
+                "name": "half"
+              },
+              "right": {
+                "kind": "IntegerLiteral",
+                "value": 2
+              },
+              "operator": "*"
+            },
+            "operator": "=="
+          }
+        }
+      ]
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "x"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 8
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "y"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "value": 5
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "is_even_x"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "bool"
+        }
+      },
+      "value": {
+        "kind": "BooleanLiteral",
+        "value": false
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "is_even_y"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "bool"
+        }
+      },
+      "value": {
+        "kind": "BooleanLiteral",
+        "value": false
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "is_even_x"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "is_even"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "x"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "is_even_y"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "is_even"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "is_even_x"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "is_even_y"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}

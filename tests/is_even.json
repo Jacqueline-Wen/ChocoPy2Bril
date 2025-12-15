@@ -1,0 +1,241 @@
+{
+  "functions": [
+    {
+      "name": "is_even",
+      "args": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "instrs": [
+        {
+          "op": "id",
+          "dest": "_temp0",
+          "type": "int",
+          "args": [
+            "n"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp1",
+          "type": "int",
+          "value": 2
+        },
+        {
+          "op": "div",
+          "dest": "_temp2",
+          "type": "int",
+          "args": [
+            "_temp0",
+            "_temp1"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "half",
+          "type": "int",
+          "args": [
+            "_temp2"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp3",
+          "type": "int",
+          "args": [
+            "n"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp4",
+          "type": "int",
+          "args": [
+            "half"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp5",
+          "type": "int",
+          "value": 2
+        },
+        {
+          "op": "mul",
+          "dest": "_temp6",
+          "type": "int",
+          "args": [
+            "_temp4",
+            "_temp5"
+          ]
+        },
+        {
+          "op": "eq",
+          "dest": "_temp7",
+          "type": "bool",
+          "args": [
+            "_temp3",
+            "_temp6"
+          ]
+        },
+        {
+          "op": "ret",
+          "args": [
+            "_temp7"
+          ]
+        }
+      ],
+      "type": "bool"
+    },
+    {
+      "name": "main",
+      "args": [],
+      "instrs": [
+        {
+          "op": "const",
+          "dest": "_temp0",
+          "type": "int",
+          "value": 8
+        },
+        {
+          "op": "id",
+          "dest": "x",
+          "type": "int",
+          "args": [
+            "_temp0"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp1",
+          "type": "int",
+          "value": 5
+        },
+        {
+          "op": "id",
+          "dest": "y",
+          "type": "int",
+          "args": [
+            "_temp1"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp2",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "op": "id",
+          "dest": "is_even_x",
+          "type": "bool",
+          "args": [
+            "_temp2"
+          ]
+        },
+        {
+          "op": "const",
+          "dest": "_temp3",
+          "type": "bool",
+          "value": false
+        },
+        {
+          "op": "id",
+          "dest": "is_even_y",
+          "type": "bool",
+          "args": [
+            "_temp3"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp4",
+          "type": "int",
+          "args": [
+            "x"
+          ]
+        },
+        {
+          "op": "call",
+          "funcs": [
+            "is_even"
+          ],
+          "args": [
+            "_temp4"
+          ],
+          "dest": "_temp5",
+          "type": "bool"
+        },
+        {
+          "op": "id",
+          "dest": "is_even_x",
+          "type": "bool",
+          "args": [
+            "_temp5"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp6",
+          "type": "int",
+          "args": [
+            "y"
+          ]
+        },
+        {
+          "op": "call",
+          "funcs": [
+            "is_even"
+          ],
+          "args": [
+            "_temp6"
+          ],
+          "dest": "_temp7",
+          "type": "bool"
+        },
+        {
+          "op": "id",
+          "dest": "is_even_y",
+          "type": "bool",
+          "args": [
+            "_temp7"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp8",
+          "type": "bool",
+          "args": [
+            "is_even_x"
+          ]
+        },
+        {
+          "op": "print",
+          "args": [
+            "_temp8"
+          ]
+        },
+        {
+          "op": "id",
+          "dest": "_temp9",
+          "type": "bool",
+          "args": [
+            "is_even_y"
+          ]
+        },
+        {
+          "op": "print",
+          "args": [
+            "_temp9"
+          ]
+        },
+        {
+          "op": "ret"
+        }
+      ],
+      "type": null
+    }
+  ]
+}
