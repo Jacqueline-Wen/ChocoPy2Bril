@@ -158,7 +158,6 @@ def is_print_call(expr):
 
 def translate_expr(expr, state):
     kind = expr.get("kind")
-    print(expr, kind)
 
     if kind == "IntegerLiteral":
         temp = state.make_temp("int")
