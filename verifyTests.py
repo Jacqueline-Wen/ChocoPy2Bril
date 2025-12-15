@@ -88,7 +88,7 @@ print("chocopy ", py_output)
 assert(bril_output.strip().lower() == py_output.strip().lower())
 print("[Test 3] control flow 2 test successful\n")
 
-# exponent.py
+# Test 4: exponent.py
 print("[Test 4] Starting to process exponent")
 bril_result = subprocess.run(
     "brili < tests/exponent.json",
@@ -112,12 +112,63 @@ py_output = py_result.stdout
 py_output = py_result.stdout.strip()
 print("chocopy ", py_output)
 
-# assert(bril_output.strip().lower() == py_output.strip().lower())
+assert(bril_output.strip().lower() == py_output.strip().lower())
 print("[Test 4] exponent test successful\n")
 
-# expr_stmt.py
-# globals.py
+# Test 5: expr_stmt.py
+print("[Test 5] Starting to process expr_stmt")
+bril_result = subprocess.run(
+    "brili < tests/expr_stmt.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/expr_stmt.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 5] expr_stmt test successful\n")
+
 # hello_world.py
+print("[Test 6] Starting to process hello_world")
+bril_result = subprocess.run(
+    "brili < tests/hello_world.json",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+bril_output = bril_result.stdout
+bril_output = bril_result.stdout.strip()
+print("bril ", bril_output)
+
+py_result = subprocess.run(
+    "python3 tests/hello_world.py",
+    shell=True,
+    capture_output=True,
+    text=True
+)
+
+py_output = py_result.stdout
+py_output = py_result.stdout.strip()
+print("chocopy ", py_output)
+
+assert(bril_output.strip().lower() == py_output.strip().lower())
+print("[Test 6] hello_world test successful\n")
+
 # incrementing_counter.py
 # inherit_init.py
 # int_and_bool_control_flow.py
