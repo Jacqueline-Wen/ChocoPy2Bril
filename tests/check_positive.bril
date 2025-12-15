@@ -1,0 +1,85 @@
+@is_positive(n: int): bool {
+  _temp0: int = id n;
+  _temp1: int = const 0;
+  _temp2: bool = gt _temp0 _temp1;
+  ret _temp2;
+}
+@sum(a: int, b: int): int {
+  _temp0: int = id a;
+  _temp1: int = id b;
+  _temp2: int = add _temp0 _temp1;
+  ret _temp2;
+}
+@diff(a: int, b: int): int {
+  _temp0: int = id a;
+  _temp1: int = id b;
+  _temp2: int = sub _temp0 _temp1;
+  ret _temp2;
+}
+@main: None {
+  _temp0: int = const 10;
+  x: int = id _temp0;
+  _temp1: int = const 4;
+  y: int = id _temp1;
+  _temp2: bool = const true;
+  flag: bool = id _temp2;
+  _temp3: int = const 0;
+  i: int = id _temp3;
+  _temp4: int = const 0;
+  s: int = id _temp4;
+  _temp5: int = const 0;
+  d: int = id _temp5;
+  _temp6: bool = id flag;
+  _temp7: int = id x;
+  _temp8: bool = call @is_positive _temp7;
+  _temp9: bool = and _temp6 _temp8;
+  br _temp9 .then_0 .else_1;
+.then_0:
+  _temp10: bool = const true;
+  print _temp10;
+  jmp .endif_2;
+.else_1:
+  _temp11: bool = const false;
+  print _temp11;
+  jmp .endif_2;
+.endif_2:
+  _temp12: int = id x;
+  _temp13: int = id y;
+  _temp14: int = call @sum _temp12 _temp13;
+  s: int = id _temp14;
+  _temp15: int = id x;
+  _temp16: int = id y;
+  _temp17: int = call @diff _temp15 _temp16;
+  d: int = id _temp17;
+  _temp18: int = id s;
+  print _temp18;
+  _temp19: int = id d;
+  print _temp19;
+  jmp .while_header_3;
+.while_header_3:
+  _temp20: int = id i;
+  _temp21: int = const 5;
+  _temp22: bool = lt _temp20 _temp21;
+  br _temp22 .while_body_4 .while_end_5;
+.while_body_4:
+  _temp23: int = id i;
+  print _temp23;
+  _temp24: int = id x;
+  _temp25: int = id i;
+  _temp26: int = mul _temp24 _temp25;
+  print _temp26;
+  _temp27: int = id i;
+  _temp28: int = const 1;
+  _temp29: int = add _temp27 _temp28;
+  i: int = id _temp29;
+  jmp .while_header_3;
+.while_end_5:
+  _temp30: int = id x;
+  _temp31: int = id y;
+  _temp32: bool = gt _temp30 _temp31;
+  _temp33: bool = id flag;
+  _temp34: bool = not _temp33;
+  _temp35: bool = or _temp32 _temp34;
+  print _temp35;
+  ret;
+}

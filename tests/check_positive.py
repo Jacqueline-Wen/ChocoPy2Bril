@@ -3,28 +3,35 @@ def is_positive(n: int) -> bool:
     return n > 0
 
 # Function to calculate sum and difference
-def sum_and_diff(a: int, b: int) -> [int]:
-    return [a + b, a - b]
+def sum(a: int, b: int) -> int:
+    return a + b
+def diff(a: int, b: int) -> int:
+    return a - b
 
 x: int = 10
 y: int = 4
 flag: bool = True
+i: int = 0
+s: int = 0
+d: int = 0
 
 # Conditional
 if flag and is_positive(x):
-    print("x is positive and flag is True")
+    print(True)
 else:
-    print("x is not positive or flag is False")
+    print(False)
 
 # Call arithmetic function
-results: [int] = sum_and_diff(x, y)
-print("Sum and Difference:", results)
+s = sum(x, y)
+d = diff(x, y)
+print(s)
+print(d)
 
 # While loop
-i: int = 0
 while i < 5:
-    print("i =", i, "x * i =", x * i)
+    print(i)
+    print(x * i)
     i = i + 1
 
 # Logical operation
-print("x > y or not flag?", x > y or not flag)
+print(x > y or not flag)
