@@ -1,4 +1,5 @@
-Note: you may need to install this repo
+### Installation Instructions
+Clone https://github.com/yangdanny97/chocopy-python-compiler
 cd chocopy-python-compiler
 pip install -r requirements.txt
 
