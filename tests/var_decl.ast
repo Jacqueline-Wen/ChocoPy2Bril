@@ -7,41 +7,6 @@
         "kind": "TypedVar",
         "identifier": {
           "kind": "Identifier",
-          "name": "w"
-        },
-        "type": {
-          "kind": "ClassType",
-          "className": "object"
-        }
-      },
-      "value": {
-        "kind": "NoneLiteral"
-      }
-    },
-    {
-      "kind": "VarDef",
-      "var": {
-        "kind": "TypedVar",
-        "identifier": {
-          "kind": "Identifier",
-          "name": "x"
-        },
-        "type": {
-          "kind": "ClassType",
-          "className": "str"
-        }
-      },
-      "value": {
-        "kind": "StringLiteral",
-        "value": "mystring"
-      }
-    },
-    {
-      "kind": "VarDef",
-      "var": {
-        "kind": "TypedVar",
-        "identifier": {
-          "kind": "Identifier",
           "name": "y"
         },
         "type": {
@@ -179,61 +144,9 @@
         "kind": "IntegerLiteral",
         "value": 1
       }
-    },
-    {
-      "kind": "VarDef",
-      "var": {
-        "kind": "TypedVar",
-        "identifier": {
-          "kind": "Identifier",
-          "name": "string"
-        },
-        "type": {
-          "kind": "ClassType",
-          "className": "str"
-        }
-      },
-      "value": {
-        "kind": "StringLiteral",
-        "value": ""
-      }
-    },
-    {
-      "kind": "VarDef",
-      "var": {
-        "kind": "TypedVar",
-        "identifier": {
-          "kind": "Identifier",
-          "name": "null"
-        },
-        "type": {
-          "kind": "ClassType",
-          "className": "str"
-        }
-      },
-      "value": {
-        "kind": "StringLiteral",
-        "value": ""
-      }
     }
   ],
   "statements": [
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "print"
-        },
-        "args": [
-          {
-            "kind": "Identifier",
-            "name": "x"
-          }
-        ]
-      }
-    },
     {
       "kind": "ExprStmt",
       "expr": {
@@ -262,6 +175,102 @@
           {
             "kind": "Identifier",
             "name": "z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "i8"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "i32"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "int32"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "int64"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "print"
+        },
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "long"
           }
         ]
       }

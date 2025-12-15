@@ -1,5 +1,3 @@
-w: object = None
-x: str = "mystring"
 y: int = 1
 z: bool = True
 # potentially colliding names
@@ -9,8 +7,11 @@ i64: int = 1
 int32: int = 1
 int64: int = 1
 long: int = 1
-string: str = ""
-null: str = ""
-print(x)
 print(y)
 print(z)
+print(i8)
+print(i32)
+print(i64)
+print(int32)
+print(int64)
+print(long)
