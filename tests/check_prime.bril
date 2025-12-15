@@ -1,0 +1,89 @@
+@is_prime(n: int, i: int): bool {
+  _temp0: int = id n;
+  _temp1: int = const 1;
+  _temp2: bool = le _temp0 _temp1;
+  br _temp2 .then_0 .else_1;
+.then_0:
+  _temp3: bool = const false;
+  ret _temp3;
+  jmp .endif_2;
+.else_1:
+  jmp .endif_2;
+.endif_2:
+  _temp4: int = id n;
+  _temp5: int = const 2;
+  _temp6: bool = eq _temp4 _temp5;
+  br _temp6 .then_3 .else_4;
+.then_3:
+  _temp7: bool = const true;
+  ret _temp7;
+  jmp .endif_5;
+.else_4:
+  jmp .endif_5;
+.endif_5:
+  _temp8: int = id n;
+  _temp9: int = const 2;
+  _temp10: int = id n;
+  _temp11: int = const 2;
+  _temp12: int = div _temp10 _temp11;
+  _temp13: int = mul _temp9 _temp12;
+  _temp14: int = sub _temp8 _temp13;
+  _temp15: int = const 0;
+  _temp16: bool = eq _temp14 _temp15;
+  br _temp16 .then_6 .else_7;
+.then_6:
+  _temp17: bool = const false;
+  ret _temp17;
+  jmp .endif_8;
+.else_7:
+  jmp .endif_8;
+.endif_8:
+  jmp .while_header_9;
+.while_header_9:
+  _temp18: int = id i;
+  _temp19: int = id i;
+  _temp20: int = mul _temp18 _temp19;
+  _temp21: int = id n;
+  _temp22: bool = le _temp20 _temp21;
+  br _temp22 .while_body_10 .while_end_11;
+.while_body_10:
+  _temp23: int = id n;
+  _temp24: int = id i;
+  _temp25: int = id n;
+  _temp26: int = id i;
+  _temp27: int = div _temp25 _temp26;
+  _temp28: int = mul _temp24 _temp27;
+  _temp29: int = sub _temp23 _temp28;
+  _temp30: int = const 0;
+  _temp31: bool = eq _temp29 _temp30;
+  br _temp31 .then_12 .else_13;
+.then_12:
+  _temp32: bool = const false;
+  ret _temp32;
+  jmp .endif_14;
+.else_13:
+  jmp .endif_14;
+.endif_14:
+  _temp33: int = id i;
+  _temp34: int = const 2;
+  _temp35: int = add _temp33 _temp34;
+  i: int = id _temp35;
+  jmp .while_header_9;
+.while_end_11:
+  _temp36: bool = const true;
+  ret _temp36;
+}
+@main(a: int): int {
+  _temp0: bool = const false;
+  b: bool = id _temp0;
+  _temp1: int = const 3;
+  i: int = id _temp1;
+  _temp2: int = id a;
+  _temp3: int = id i;
+  _temp4: bool = call @is_prime _temp2 _temp3;
+  b: bool = id _temp4;
+  _temp5: bool = id b;
+  print _temp5;
+  _temp6: int = const 0;
+  ret _temp6;
+}

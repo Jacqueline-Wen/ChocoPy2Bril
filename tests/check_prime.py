@@ -1,27 +1,19 @@
-# Function to add and multiply two numbers
-def add_and_multiply(a, b):
-    return a + b, a * b
+def is_prime(n: int, i: int) -> bool:
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n - (2 * (n // 2)) == 0:
+        return False
+    while i * i <= n:
+        if n - (i * (n // i)) == 0:
+            return False
+        i = i + 2
+    return True
 
-# Variables
-x = 5        # int
-y = 2        # int
-active = True  # bool
-
-# Conditional
-if active and x > y:
-    print(f"{x} is greater than {y} and active is True")
-else:
-    print(f"{x} is not greater than {y} or active is False")
-
-# Arithmetic operations using function
-sum_val, prod_val = add_and_multiply(x, y)
-print(f"Sum: {sum_val}, Product: {prod_val}")
-
-# While loop
-i = 0
-while i < 3:
-    print(f"i = {i}, x + i = {x + i}")
-    i += 1
-
-# Logical operation
-print(f"Is x > y or not active? {x > y or not active}")
+def main(a: int) -> int:
+    b: bool = False     # declaration must come before statements
+    i: int = 3
+    b = is_prime(a, i)
+    print(b)
+    return 0        # ChocoPy requires functions to return if typed non-void
