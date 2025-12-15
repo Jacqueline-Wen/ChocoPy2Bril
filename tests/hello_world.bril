@@ -1,0 +1,5 @@
+@main: None {
+  _temp0: int = const 12345;
+  print _temp0;
+  ret;
+}

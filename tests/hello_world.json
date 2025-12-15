@@ -1,3 +1,26 @@
 {
-  "functions": []
+  "functions": [
+    {
+      "name": "main",
+      "args": [],
+      "instrs": [
+        {
+          "op": "const",
+          "dest": "_temp0",
+          "type": "int",
+          "value": 12345
+        },
+        {
+          "op": "print",
+          "args": [
+            "_temp0"
+          ]
+        },
+        {
+          "op": "ret"
+        }
+      ],
+      "type": null
+    }
+  ]
 }

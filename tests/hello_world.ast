@@ -12,8 +12,8 @@
         },
         "args": [
           {
-            "kind": "StringLiteral",
-            "value": "hello, world!"
+            "kind": "IntegerLiteral",
+            "value": 12345
           }
         ]
       }
