@@ -2,121 +2,44 @@
   "kind": "Program",
   "declarations": [
     {
-      "kind": "ClassDef",
+      "kind": "FuncDef",
       "name": {
         "kind": "Identifier",
-        "name": "Counter"
+        "name": "inc"
       },
-      "superClass": {
-        "kind": "Identifier",
-        "name": "object"
-      },
-      "declarations": [
+      "params": [
         {
-          "kind": "VarDef",
-          "var": {
-            "kind": "TypedVar",
-            "identifier": {
+          "kind": "TypedVar",
+          "identifier": {
+            "kind": "Identifier",
+            "name": "n"
+          },
+          "type": {
+            "kind": "ClassType",
+            "className": "int"
+          }
+        }
+      ],
+      "returnType": {
+        "kind": "ClassType",
+        "className": "int"
+      },
+      "declarations": [],
+      "statements": [
+        {
+          "kind": "ReturnStmt",
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
               "kind": "Identifier",
               "name": "n"
             },
-            "type": {
-              "kind": "ClassType",
-              "className": "int"
-            }
-          },
-          "value": {
-            "kind": "IntegerLiteral",
-            "value": 0
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "+"
           }
-        },
-        {
-          "kind": "FuncDef",
-          "name": {
-            "kind": "Identifier",
-            "name": "__init__"
-          },
-          "params": [
-            {
-              "kind": "TypedVar",
-              "identifier": {
-                "kind": "Identifier",
-                "name": "self"
-              },
-              "type": {
-                "kind": "ClassType",
-                "className": "Counter"
-              }
-            }
-          ],
-          "returnType": {
-            "kind": "ClassType",
-            "className": "<None>"
-          },
-          "declarations": [],
-          "statements": []
-        },
-        {
-          "kind": "FuncDef",
-          "name": {
-            "kind": "Identifier",
-            "name": "inc"
-          },
-          "params": [
-            {
-              "kind": "TypedVar",
-              "identifier": {
-                "kind": "Identifier",
-                "name": "self"
-              },
-              "type": {
-                "kind": "ClassType",
-                "className": "Counter"
-              }
-            }
-          ],
-          "returnType": {
-            "kind": "ClassType",
-            "className": "<None>"
-          },
-          "declarations": [],
-          "statements": [
-            {
-              "kind": "AssignStmt",
-              "targets": [
-                {
-                  "kind": "MemberExpr",
-                  "object": {
-                    "kind": "Identifier",
-                    "name": "self"
-                  },
-                  "member": {
-                    "kind": "Identifier",
-                    "name": "n"
-                  }
-                }
-              ],
-              "value": {
-                "kind": "BinaryExpr",
-                "left": {
-                  "kind": "MemberExpr",
-                  "object": {
-                    "kind": "Identifier",
-                    "name": "self"
-                  },
-                  "member": {
-                    "kind": "Identifier",
-                    "name": "n"
-                  }
-                },
-                "right": {
-                  "kind": "IntegerLiteral",
-                  "value": 1
-                },
-                "operator": "+"
-              }
-            }
-          ]
         }
       ]
     },
@@ -126,15 +49,16 @@
         "kind": "TypedVar",
         "identifier": {
           "kind": "Identifier",
-          "name": "c"
+          "name": "n"
         },
         "type": {
           "kind": "ClassType",
-          "className": "Counter"
+          "className": "int"
         }
       },
       "value": {
-        "kind": "NoneLiteral"
+        "kind": "IntegerLiteral",
+        "value": 0
       }
     },
     {
@@ -162,34 +86,21 @@
       "targets": [
         {
           "kind": "Identifier",
-          "name": "c"
+          "name": "n"
         }
       ],
       "value": {
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "Counter"
+          "name": "inc"
         },
-        "args": []
-      }
-    },
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "MethodCallExpr",
-        "method": {
-          "kind": "MemberExpr",
-          "object": {
+        "args": [
+          {
             "kind": "Identifier",
-            "name": "c"
-          },
-          "member": {
-            "kind": "Identifier",
-            "name": "inc"
+            "name": "n"
           }
-        },
-        "args": []
+        ]
       }
     },
     {
@@ -198,21 +109,14 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
             "kind": "BinaryExpr",
             "left": {
-              "kind": "MemberExpr",
-              "object": {
-                "kind": "Identifier",
-                "name": "c"
-              },
-              "member": {
-                "kind": "Identifier",
-                "name": "n"
-              }
+              "kind": "Identifier",
+              "name": "n"
             },
             "right": {
               "kind": "IntegerLiteral",
@@ -224,21 +128,25 @@
       }
     },
     {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "MethodCallExpr",
-        "method": {
-          "kind": "MemberExpr",
-          "object": {
-            "kind": "Identifier",
-            "name": "c"
-          },
-          "member": {
-            "kind": "Identifier",
-            "name": "inc"
-          }
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "n"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "inc"
         },
-        "args": []
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "n"
+          }
+        ]
       }
     },
     {
@@ -247,21 +155,14 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
             "kind": "BinaryExpr",
             "left": {
-              "kind": "MemberExpr",
-              "object": {
-                "kind": "Identifier",
-                "name": "c"
-              },
-              "member": {
-                "kind": "Identifier",
-                "name": "n"
-              }
+              "kind": "Identifier",
+              "name": "n"
             },
             "right": {
               "kind": "IntegerLiteral",
@@ -273,39 +174,47 @@
       }
     },
     {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "MethodCallExpr",
-        "method": {
-          "kind": "MemberExpr",
-          "object": {
-            "kind": "Identifier",
-            "name": "c"
-          },
-          "member": {
-            "kind": "Identifier",
-            "name": "inc"
-          }
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "n"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "inc"
         },
-        "args": []
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "n"
+          }
+        ]
       }
     },
     {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "MethodCallExpr",
-        "method": {
-          "kind": "MemberExpr",
-          "object": {
-            "kind": "Identifier",
-            "name": "c"
-          },
-          "member": {
-            "kind": "Identifier",
-            "name": "inc"
-          }
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "name": "n"
+        }
+      ],
+      "value": {
+        "kind": "CallExpr",
+        "function": {
+          "kind": "Identifier",
+          "name": "inc"
         },
-        "args": []
+        "args": [
+          {
+            "kind": "Identifier",
+            "name": "n"
+          }
+        ]
       }
     },
     {
@@ -314,21 +223,14 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
             "kind": "BinaryExpr",
             "left": {
-              "kind": "MemberExpr",
-              "object": {
-                "kind": "Identifier",
-                "name": "c"
-              },
-              "member": {
-                "kind": "Identifier",
-                "name": "n"
-              }
+              "kind": "Identifier",
+              "name": "n"
             },
             "right": {
               "kind": "IntegerLiteral",
@@ -340,57 +242,61 @@
       }
     },
     {
-      "kind": "ForStmt",
-      "identifier": {
-        "kind": "Identifier",
-        "name": "i"
-      },
-      "iterable": {
-        "kind": "ListExpr",
-        "elements": [
-          {
-            "kind": "IntegerLiteral",
-            "value": 9
-          },
-          {
-            "kind": "IntegerLiteral",
-            "value": 9
-          },
-          {
-            "kind": "IntegerLiteral",
-            "value": 9
-          },
-          {
-            "kind": "IntegerLiteral",
-            "value": 9
-          },
-          {
-            "kind": "IntegerLiteral",
-            "value": 9
-          },
-          {
-            "kind": "IntegerLiteral",
-            "value": 9
-          }
-        ]
+      "kind": "WhileStmt",
+      "condition": {
+        "kind": "BinaryExpr",
+        "left": {
+          "kind": "Identifier",
+          "name": "i"
+        },
+        "right": {
+          "kind": "IntegerLiteral",
+          "value": 6
+        },
+        "operator": "<"
       },
       "body": [
         {
-          "kind": "ExprStmt",
-          "expr": {
-            "kind": "MethodCallExpr",
-            "method": {
-              "kind": "MemberExpr",
-              "object": {
-                "kind": "Identifier",
-                "name": "c"
-              },
-              "member": {
-                "kind": "Identifier",
-                "name": "inc"
-              }
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "n"
+            }
+          ],
+          "value": {
+            "kind": "CallExpr",
+            "function": {
+              "kind": "Identifier",
+              "name": "inc"
             },
-            "args": []
+            "args": [
+              {
+                "kind": "Identifier",
+                "name": "n"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "AssignStmt",
+          "targets": [
+            {
+              "kind": "Identifier",
+              "name": "i"
+            }
+          ],
+          "value": {
+            "kind": "BinaryExpr",
+            "left": {
+              "kind": "Identifier",
+              "name": "i"
+            },
+            "right": {
+              "kind": "IntegerLiteral",
+              "value": 1
+            },
+            "operator": "+"
           }
         }
       ]
@@ -401,21 +307,14 @@
         "kind": "CallExpr",
         "function": {
           "kind": "Identifier",
-          "name": "__assert__"
+          "name": "print"
         },
         "args": [
           {
             "kind": "BinaryExpr",
             "left": {
-              "kind": "MemberExpr",
-              "object": {
-                "kind": "Identifier",
-                "name": "c"
-              },
-              "member": {
-                "kind": "Identifier",
-                "name": "n"
-              }
+              "kind": "Identifier",
+              "name": "n"
             },
             "right": {
               "kind": "IntegerLiteral",

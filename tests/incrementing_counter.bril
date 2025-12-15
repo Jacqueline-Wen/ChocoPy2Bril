@@ -1,0 +1,57 @@
+@inc(n: int): int {
+  _temp0: int = id n;
+  _temp1: int = const 1;
+  _temp2: int = add _temp0 _temp1;
+  ret _temp2;
+}
+@main: None {
+  _temp0: int = const 0;
+  n: int = id _temp0;
+  _temp1: int = const 0;
+  i: int = id _temp1;
+  _temp2: int = id n;
+  _temp3: int = call @inc _temp2;
+  n: int = id _temp3;
+  _temp4: int = id n;
+  _temp5: int = const 1;
+  _temp6: bool = eq _temp4 _temp5;
+  print _temp6;
+  _temp7: int = id n;
+  _temp8: int = call @inc _temp7;
+  n: int = id _temp8;
+  _temp9: int = id n;
+  _temp10: int = const 2;
+  _temp11: bool = eq _temp9 _temp10;
+  print _temp11;
+  _temp12: int = id n;
+  _temp13: int = call @inc _temp12;
+  n: int = id _temp13;
+  _temp14: int = id n;
+  _temp15: int = call @inc _temp14;
+  n: int = id _temp15;
+  _temp16: int = id n;
+  _temp17: int = const 4;
+  _temp18: bool = eq _temp16 _temp17;
+  print _temp18;
+  jmp .while_header_0;
+.while_header_0:
+  _temp19: int = id i;
+  _temp20: int = const 6;
+  _temp21: bool = lt _temp19 _temp20;
+  br _temp21 .while_body_1 .while_end_2;
+.while_body_1:
+  _temp22: int = id n;
+  _temp23: int = call @inc _temp22;
+  n: int = id _temp23;
+  _temp24: int = id i;
+  _temp25: int = const 1;
+  _temp26: int = add _temp24 _temp25;
+  i: int = id _temp26;
+  jmp .while_header_0;
+.while_end_2:
+  _temp27: int = id n;
+  _temp28: int = const 10;
+  _temp29: bool = eq _temp27 _temp28;
+  print _temp29;
+  ret;
+}

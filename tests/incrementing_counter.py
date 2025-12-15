@@ -1,24 +1,17 @@
-class Counter(object):
-    n: int = 0
+def inc(n: int) -> int:
+    return n + 1
 
-    def __init__(self: Counter):
-        pass
-
-    def inc(self: Counter):
-        self.n = self.n + 1
-
-
-c: Counter = None
+n: int = 0
 i: int = 0
-c = Counter()
-c.inc()
-assert c.n == 1
-c.inc()
-assert c.n == 2
-c.inc()
-c.inc()
-assert c.n == 4
+n = inc(n)
+print(n == 1)
+n = inc(n)
+print(n == 2)
+n = inc(n)
+n = inc(n)
+print(n == 4)
 
-for i in [9, 9, 9, 9, 9, 9]:
-    c.inc()
-assert c.n == 10
+while i < 6:
+    n = inc(n)
+    i = i + 1
+print(n == 10)
