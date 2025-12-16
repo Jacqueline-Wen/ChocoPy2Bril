@@ -15,3 +15,14 @@
   print _temp5;
   ret;
 }
+@main: None {
+  _temp0: bool = const true;
+  _temp1: bool = call @foo;
+  _temp2: bool = or _temp0 _temp1;
+  print _temp2;
+  _temp3: bool = const false;
+  _temp4: bool = call @foo;
+  _temp5: bool = and _temp3 _temp4;
+  print _temp5;
+  ret;
+}

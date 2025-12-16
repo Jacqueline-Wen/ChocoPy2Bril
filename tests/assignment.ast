@@ -229,22 +229,6 @@
           }
         ]
       }
-    },
-    {
-      "kind": "ExprStmt",
-      "expr": {
-        "kind": "CallExpr",
-        "function": {
-          "kind": "Identifier",
-          "name": "print"
-        },
-        "args": [
-          {
-            "kind": "StringLiteral",
-            "value": "1"
-          }
-        ]
-      }
     }
   ],
   "errors": {
