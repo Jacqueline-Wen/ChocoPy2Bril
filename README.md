@@ -19,3 +19,6 @@ for file in tests/*.py; do
     python3 chocopybril.py "$file"
 done
 ```
+
+### References
+We heavily referenced the "yangdanny97/chocopy-python-compiler" repository for the test cases. 
