@@ -138,7 +138,7 @@
         "kind": "TypedVar",
         "identifier": {
           "kind": "Identifier",
-          "name": "sum"
+          "name": "sum2"
         },
         "type": {
           "kind": "ClassType",
@@ -157,7 +157,7 @@
       "targets": [
         {
           "kind": "Identifier",
-          "name": "sum"
+          "name": "sum2"
         }
       ],
       "value": {
@@ -189,7 +189,7 @@
         "args": [
           {
             "kind": "Identifier",
-            "name": "sum"
+            "name": "sum2"
           }
         ]
       }
@@ -212,7 +212,7 @@
             "args": [
               {
                 "kind": "Identifier",
-                "name": "sum"
+                "name": "sum2"
               }
             ]
           }

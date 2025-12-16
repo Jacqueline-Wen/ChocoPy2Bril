@@ -128,7 +128,7 @@
         },
         {
           "op": "id",
-          "dest": "sum",
+          "dest": "sum2",
           "type": "int",
           "args": [
             "_temp2"
@@ -164,7 +164,7 @@
         },
         {
           "op": "id",
-          "dest": "sum",
+          "dest": "sum2",
           "type": "int",
           "args": [
             "_temp5"
@@ -175,7 +175,7 @@
           "dest": "_temp6",
           "type": "int",
           "args": [
-            "sum"
+            "sum2"
           ]
         },
         {
@@ -189,7 +189,7 @@
           "dest": "_temp7",
           "type": "int",
           "args": [
-            "sum"
+            "sum2"
           ]
         },
         {

@@ -69,11 +69,7 @@
           "op": "const",
           "dest": "_temp3",
           "type": "bool",
-<<<<<<< Updated upstream
           "value": true
-=======
-          "value": false
->>>>>>> Stashed changes
         },
         {
           "op": "call",

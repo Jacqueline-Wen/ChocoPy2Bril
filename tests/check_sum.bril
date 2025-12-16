@@ -16,14 +16,14 @@
   _temp1: int = const 8;
   y: int = id _temp1;
   _temp2: int = const 0;
-  sum: int = id _temp2;
+  sum2: int = id _temp2;
   _temp3: int = id x;
   _temp4: int = id y;
   _temp5: int = call @sum _temp3 _temp4;
-  sum: int = id _temp5;
-  _temp6: int = id sum;
+  sum2: int = id _temp5;
+  _temp6: int = id sum2;
   print _temp6;
-  _temp7: int = id sum;
+  _temp7: int = id sum2;
   _temp8: bool = call @check _temp7;
   print _temp8;
   ret;

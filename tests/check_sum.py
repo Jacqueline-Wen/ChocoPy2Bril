@@ -6,8 +6,8 @@ def check(a: int) -> bool:
 
 x: int = 3
 y: int = 8
-sum: int = 0
+sum2: int = 0
 
-sum = sum(x, y)
-print(sum)
-print(check(sum))
+sum2 = sum(x, y)
+print(sum2)
+print(check(sum2))
